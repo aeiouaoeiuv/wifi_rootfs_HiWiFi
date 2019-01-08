@@ -1,0 +1,13 @@
+Package: libnl-tiny
+Version: 0.1-3
+Depends: libc
+Provides: 
+Source: package/libs/libnl-tiny
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: ralink
+Installed-Size: 12698
+Description:  This package contains a stripped down version of libnl

@@ -1,0 +1,4 @@
+/etc/hotplug.d/block/restart.d/80-syslog-ng
+/etc/init.d/syslog-ng
+/etc/syslog-ng.conf_sample
+/usr/sbin/syslog-ng

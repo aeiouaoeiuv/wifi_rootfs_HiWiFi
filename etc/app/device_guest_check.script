@@ -1,0 +1,22 @@
+crontab_file=/etc/crontabs/root
+key='device_guest_check'
+
+start() {
+  stop
+  sed -i '/^$/d' $crontab_file
+  echo "" >> $crontab_file
+  echo "* * * * * lua /etc/app/device_guest_check.lua #device_guest_check" >> $crontab_file
+  echo "" >> $crontab_file
+  /etc/init.d/cron stop
+  /etc/init.d/cron start
+  return 0
+}
+
+stop() {
+  sed -i '/#device_guest_check$/d' $crontab_file
+  /etc/init.d/cron stop
+  /etc/init.d/cron start
+  return 0
+}
+
+$1 $2

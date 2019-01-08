@@ -1,0 +1,9 @@
+/usr/lib/iptables/libxt_salist.so
+/etc/salist/local.conf
+/etc/init.d/salist
+/etc/salist/cernet.conf
+/etc/salist/unicom.conf
+/etc/salist/hiwifi.conf
+/etc/salist/cmcc.conf
+/etc/salist/china.conf
+/etc/salist/telecom.conf

@@ -1,0 +1,13 @@
+Package: lsof
+Version: 4.86-1
+Depends: libc, librpc
+Provides: 
+Source: /home/build/hiwifi/daily/HC5661/feeds/lsof
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 57631
+Description:  LiSt Open Files - a diagnostic tool

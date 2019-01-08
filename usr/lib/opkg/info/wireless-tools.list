@@ -1,0 +1,4 @@
+/usr/sbin/iwconfig
+/usr/sbin/iwlist
+/usr/lib/lua/hcwifi.so
+/usr/sbin/iwpriv

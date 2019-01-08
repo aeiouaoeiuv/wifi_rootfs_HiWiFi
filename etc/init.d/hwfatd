@@ -1,0 +1,17 @@
+#!/bin/sh /etc/rc.common
+# Copyright hiwifi.com
+
+START=35
+
+FIFO="/var/run/hwfatd.fifo"
+BIN=/usr/sbin/hwfatd
+
+start() {
+	[ ! -p "$FIFO" ] && mkfifo $FIFO 2>/dev/null
+	service_start $BIN
+}
+
+stop() {
+	rm $FIFO
+	service_stop $BIN
+}

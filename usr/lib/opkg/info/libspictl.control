@@ -1,0 +1,13 @@
+Package: libspictl
+Version: 1-1
+Depends: libc
+Provides: 
+Source: package/spictl
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Duke Wu <duke.wu@ikwcn.com>
+Architecture: all
+Installed-Size: 1859
+Description:  Provide supporting for writing or reading information in SPI flash.

@@ -1,0 +1,13 @@
+Package: devctl
+Version: 1.0.2-5
+Depends: libc, libbdinfo
+Provides: 
+Source: package/network/services/devctl
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Abu Cheng <abu.zheng@hiwifi.tw>
+Architecture: ralink
+Installed-Size: 1743
+Description:  device control tool.

@@ -1,0 +1,18 @@
+#!/bin/sh /etc/rc.common
+# Copyright (c) 2012 Elite Co., Ltd.
+# Author: Hong Shen <sh@ikwcn.com>
+
+START=99
+
+SERVICE_DAEMONIZE=1
+SERVICE_WRITE_PID=1
+
+CM_AGENT_BIN=/usr/lib/cmagent/cmagent
+
+start() {
+  service_start $CM_AGENT_BIN
+}
+
+stop() {
+  service_stop $CM_AGENT_BIN
+}

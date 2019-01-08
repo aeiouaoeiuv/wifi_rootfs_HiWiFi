@@ -1,0 +1,13 @@
+Package: ated
+Version: 1.0-1
+Depends: libc
+Provides: 
+Source: package/network/services/ated
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 3173
+Description:  Ralink radio test deamon.

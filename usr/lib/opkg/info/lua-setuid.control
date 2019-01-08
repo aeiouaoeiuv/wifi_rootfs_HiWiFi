@@ -1,0 +1,13 @@
+Package: lua-setuid
+Version: 1-20140521
+Depends: libc, liblua
+Provides: 
+Source: /home/build/hiwifi/daily/HC5661/feeds/lua-setuid
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Mike Savage 
+Architecture: ralink
+Installed-Size: 1735
+Description:  A Lua module that provides setuid and chroot functionality.

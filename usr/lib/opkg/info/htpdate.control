@@ -1,0 +1,17 @@
+Package: htpdate
+Version: 1.0.5-20140120-b707e2f104cf9dbd9d8392285e125db67f17f4f0-1
+Depends: libc, libbdinfo
+Provides: 
+Source: /home/release/branch/release0.9003/HC5761/package/htpdate
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 7487
+Description:  The HTTP Time Protocol (HTP) is used to synchronize a computer's time
+ with web servers as reference time source. Htpdate will synchronize your
+ computer's time by extracting timestamps from HTTP headers found
+ in web server responses. Htpdate can be used as a daemon, to keep your
+ computer synchronized.

@@ -1,0 +1,45 @@
+
+config system
+	option hostname 'Hiwifi'
+	option timezone 'CST-8'
+	option zonename 'Asia/Shanghai'
+
+config timeserver 'ntp'
+	list server 'time.turboer.com'
+	list server 'ntp.api.bz'
+	list server 's1b.time.edu.cn'
+	list server 'time-a.timefreq.bldrdoc.gov'
+	list server 'time-a.nist.gov'
+	list server 'nist1-dc.glassey.com'
+	option enable_server '0'
+
+config default 'dhcpc'
+	option hostname 'Hiwifi'
+
+config button 'btn_RESET'
+	option name 'reset'
+	option action 'released'
+	option handler 'rled && firstboot && reboot'
+	option min '3'
+	option max '30'
+
+config button 'btn_WPS'
+	option name 'reset'
+	option action 'released'
+	option handler 'logger simulate WPS start'
+
+config led 'led_inet'
+	option name 'INET'
+	option sysfs 'HC5761:green:internet'
+	option default '0'
+
+config led 'led_wlan'
+	option name 'WLAN'
+	option sysfs 'HC5761:green:wlan-2p4'
+	option trigger 'wifi0tpt'
+
+config led 'led_wlan5g'
+	option name 'WLAN5G'
+	option sysfs 'HC5761:green:wlan-5p'
+	option trigger 'wifi1tpt'
+

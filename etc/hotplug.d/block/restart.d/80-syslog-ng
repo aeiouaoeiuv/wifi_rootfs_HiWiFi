@@ -1,0 +1,30 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2006-2011 OpenWrt.org
+
+START=50
+
+SERVICE_USE_PID=1
+
+start() {
+	[ -f /etc/syslog-ng.conf_sample ] || return 1
+	cp -af /etc/syslog-ng.conf_sample /etc/syslog-ng.conf
+
+	[ -f "/lib/platform.sh" ] && {
+		. /lib/platform.sh
+		tw_server_addr=$(tw_get_mac)
+		if [ "$tw_server_addr" != "" ] ; then
+			sed -i "s/TurboWireless/${tw_server_addr}/g" /etc/syslog-ng.conf
+		fi
+	}
+
+	[ -f /etc/syslog-ng.conf ] || return 1
+	service_start /usr/sbin/syslog-ng -R /tmp/syslog-ng.persist
+}
+
+stop() {
+	killall syslog-ng
+}
+
+reload() {
+	service_reload /usr/sbin/syslog-ng -R /tmp/syslog-ng.persist
+}

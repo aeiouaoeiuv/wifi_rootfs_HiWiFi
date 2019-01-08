@@ -1,0 +1,13 @@
+Package: special-dial
+Version: 1.1-1
+Depends: libc, librt
+Provides: 
+Source: package/special-dial
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Duke Wu <duke.wu@hiwifi.tw>
+Architecture: all
+Installed-Size: 7428
+Description:  Provide supporting for PPPoE special dialing in some region.

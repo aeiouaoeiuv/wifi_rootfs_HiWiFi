@@ -1,0 +1,5 @@
+/etc/init.d/x3c8021x
+/etc/config/x3c8021x
+/etc/logrotate.d/x3c8021x
+/usr/sbin/x3c8021x
+/etc/hotplug.d/gmac/wan/50-x3c8021x

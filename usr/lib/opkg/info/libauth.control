@@ -1,0 +1,13 @@
+Package: libauth
+Version: 64-20140109
+Depends: libc, libtw, libbdinfo, libcurl, libopenssl
+Provides: 
+Source: /home/release/branch/release0.9003/HC5761/package/libauth
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Hong Shen <sh@ikwcn.com>
+Architecture: ralink
+Installed-Size: 4933
+Description:  Library for Authentication

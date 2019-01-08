@@ -1,0 +1,6 @@
+/sbin/hwf_info_gather.sh
+/sbin/hwf_health_chk.sh
+/etc/init.d/hwf_health_chk
+/lib/functions/hwf_upload_info_routine.sh
+/sbin/hwf_info_upload.sh
+/etc/init.d/hwf_info_upload

@@ -1,0 +1,40 @@
+#!/bin/sh /etc/rc.common 
+
+START=99 
+
+url_mobile='/tmp/login_mobile.html'
+url_web='/tmp/login_web.html'
+
+url_mobile_o='/www/login_mobile.html'
+url_web_o='/www/login_web.html'
+
+url_mobile_bk='/www/login_mobile_backup.html'
+url_web_bk='/www/login_web_backup.html'
+
+start() {
+	rm -rf $url_mobile
+	rm -rf $url_web
+	
+	rm -rf $url_mobile_o
+	rm -rf $url_web_o
+	
+	wget http://127.0.0.1/cgi-bin/turbo/admin_mobile -O $url_mobile
+	grep "this_line_is_for_loginpage_cache_donot_delete" $url_mobile
+	[ $? -ne 0 ] && {
+		cp $url_mobile_bk $url_mobile
+	}
+	
+	wget http://127.0.0.1/cgi-bin/turbo/admin_web -O $url_web
+	grep "this_line_is_for_loginpage_cache_donot_delete" $url_web
+	[ $? -ne 0 ] && {
+		cp $url_web_bk $url_web
+	}
+	
+	ln -s $url_mobile $url_mobile_o
+	ln -s $url_web $url_web_o 
+	return 0
+}
+
+stop() {
+	return 0
+}

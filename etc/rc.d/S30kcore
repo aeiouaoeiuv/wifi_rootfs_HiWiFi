@@ -1,0 +1,47 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2013 hiwifi.tw
+
+START=30
+
+LOG_FILE=/tmp/data/hwf_sys_info.log
+KPANIC_LOG_FILE=/tmp/data/kpanic.log
+LOG_TMP_FILE=/tmp/log/.kpanic.log
+BOARD_INFO=$(cat /tmp/sysinfo/board_name)
+IGNORE_NUM_HC6361=304
+IGNORE_NUM_HC5761=0
+PANIC_DEV_HC6361="/dev/mtdblock2"
+
+find_panic_mtd_part() {
+	local PART="$(grep "\"$1\"" /proc/mtd | awk -F: '{print $1}')"
+	local PREFIX=/dev/mtdblock
+
+	PART="${PART##mtd}"
+	[ -d /dev/mtdblock ] && PREFIX=/dev/mtdblock/
+	echo "${PART:+$PREFIX$PART}"
+}
+
+start()
+{
+	local ignore_num=$IGNORE_NUM_HC6361	
+	local panic_dev=$PANIC_DEV_HC6361
+	local mtdpart=""
+ 
+	if [ "$BOARD_INFO" != "tw150v1" ];then
+		mtdpart="$(find_panic_mtd_part hw_panic)"
+		[ -z "$mtdpart" ] && return 1 
+		ignore_num=$IGNORE_NUM_HC5761
+		panic_dev=$mtdpart
+	fi
+	dd if=$panic_dev of=$LOG_TMP_FILE bs=4096 skip=$ignore_num count=4
+	mkdir -p /tmp/data
+	grep -v "^$" $LOG_TMP_FILE >$LOG_FILE
+	cat $LOG_TMP_FILE | grep -qs "Panic Log"
+	if [ $? -eq 0 ]; then
+		cp $LOG_FILE $KPANIC_LOG_FILE
+	fi
+	
+	rm $LOG_TMP_FILE
+
+	insmod hwf_core
+}
+

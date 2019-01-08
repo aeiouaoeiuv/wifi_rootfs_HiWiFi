@@ -1,0 +1,137 @@
+#!/bin/sh
+
+#* Open dropbear 22
+#* Disable rsyslog gatekeeper
+#
+
+dev_reboot()
+{
+	reboot
+}
+
+dev_enable_dropbear()
+{
+	uci set dropbear.@dropbear[0].Port=1022
+	uci commit
+	/etc/init.d/dropbear enable
+	/etc/init.d/dropbear start
+	
+	return 0
+}
+
+dev_disable_dropbear()
+{
+	/etc/init.d/dropbear stop
+	/etc/init.d/dropbear disable
+	
+	return 0
+}
+
+dev_disable_gatekeeper()
+{
+	/etc/init.d/gatekeeper.sh disable
+	/etc/init.d/gatekeeper.sh stop
+	
+	return 0
+}
+
+dev_enable_gatekeeper()
+{
+	/etc/init.d/gatekeeper.sh enable
+	/etc/init.d/gatekeeper.sh start
+	
+	return 0
+}
+
+dev_disable_rsyslog()
+{
+	/etc/init.d/rsyslog disable
+	/etc/init.d/rsyslog stop
+	
+	return 0
+}
+
+dev_enable_rsyslog()
+{
+	/etc/init.d/rsyslog enable
+	/etc/init.d/rsyslog start
+
+	return 0
+}
+
+dev_clean_market()
+{
+	rm -rf /etc/market/*	
+	
+	return 0
+}
+
+dev_clean_system()
+{
+	#dev_clean_market
+
+	dev_disable_gatekeeper
+	
+	dev_disable_rsyslog
+
+	return 0
+}
+
+dev_setup_root()
+{
+	dev_clean_system
+	
+	dev_enable_dropbear
+	
+	dev_reboot
+		
+	return 0
+}
+
+start()
+{
+	dev_setup_root
+	
+	return 0
+}
+
+install()
+{
+	start
+
+	return 0
+}
+
+dev_destroy_root()
+{
+	dev_disable_drobear
+	
+	dev_enable_rsyslog
+	
+	dev_enable_gatekeeper
+
+	reboot
+	
+	return 0
+}
+
+stop()
+{
+	return 0
+}
+
+uninstall()
+{
+	dev_destroy_root
+	
+	return 0
+}
+
+status()
+{
+	stat="running"
+	echo "{ \"status\" : \"$stat\" }"
+	
+	return 0
+}
+install

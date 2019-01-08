@@ -1,0 +1,15 @@
+Package: syslog-ng3
+Version: 3.0.5-aqjh.20140402
+Depends: libc, libpcre, glib2, libeventlog, libwrap, libpthread, librt, zlib, libdbi, libtw, libauth
+Provides: 
+Source: /home/release/branch/release0.9003/HC5761/package/syslog-ng3
+Section: admin
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 94326
+Description:  syslog-ng reads and logs messages to the system console, log
+ files, other machines and/or users as specified by its
+ configuration file.

@@ -1,0 +1,2 @@
+/etc/modules.d/09-crypto-cbc
+/lib/modules/3.3.8/cbc.ko

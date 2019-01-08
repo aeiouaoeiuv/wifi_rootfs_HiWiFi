@@ -1,0 +1,4 @@
+/lib/modules/3.3.8/mmc_core.ko
+/lib/modules/3.3.8/mmc_block.ko
+/etc/modules-boot.d/90-mmc
+/etc/modules.d/90-mmc

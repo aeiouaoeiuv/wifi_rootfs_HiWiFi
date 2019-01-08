@@ -1,0 +1,114 @@
+#!/usr/bin/lua
+
+require("luci.sys")
+local callapi = require("openapi.callapi")
+local json = require("hiwifi.json")
+local util = require("luci.util")
+local nixio = require"nixio"
+
+--------close stdout and stderr---------
+local null = nixio.open("/dev/null", "w+")
+local tmp = nixio.dup(nixio.stdout)
+
+nixio.dup(null, nixio.stdout)
+nixio.dup(nixio.stdout, nixio.stderr)
+--null:close()
+
+function ret(output)
+  -------open stdout-------
+  nixio.dup(tmp, nixio.stdout)
+  --tmp:close()
+
+  print("Status: 200")
+  print("Content-Type: application/json\n")
+
+  local out = {}
+
+  out["app_data"] = output["data"]
+  out["app_msg"] = output["msg"]
+  out["app_code"] = output["code"]
+  out["code"] = "0"
+  out["msg"] = ""
+  out["data"] = ""
+  out["source"] = "1"
+  print(json.encode(out))
+  os.exit()
+end
+
+function get_sign(query)
+  query_t = util.split(query,"&")
+  for k,v in pairs(query_t) do
+    param = util.split(v,"=")
+    if param[1] == "sign" then
+      return param[2]
+    end
+  end
+  return nil
+end
+
+function get_method(uri)
+  local uri_t = util.split(uri,"?")
+  local method  = uri_t[1] or ""
+  return method
+end
+
+local output = {}
+
+local query_string = luci.sys.getenv("QUERY_STRING") or ""
+local sign = get_sign(query_string)
+
+local request_uri = luci.sys.getenv("REQUEST_URI") or ""
+local method = get_method(request_uri)
+
+local content_type = luci.sys.getenv("CONTENT_TYPE")
+if string.match(content_type, "application/json") == nil then
+  output["code"] = "100017"
+  output["msg"] = "数据格式应该为application/json"
+  ret(output)
+end
+
+if method == "/call" then
+  if sign == nil or sign == "" then
+    output["code"] = "100011"
+    output["msg"] = "校验参数sign不合法"
+    output["data"] = ""
+    ret(output)
+  end
+
+  local body = io.stdin:read(tonumber(luci.sys.getenv("CONTENT_LENGTH")))
+  io.stdin:close()
+
+  local body_t = json.decode(body)
+  if body_t == "" or body_t == nil then
+    output["code"] = "100017"
+    output["msg"] = "数据格式应该为application/json"
+    output["data"] = ""
+    ret(output)
+  end
+  
+  if body_t.client_id == nil or body_t.client_id == "" then
+    output["code"] = "100019"
+    output["msg"] = "请输入客户端ID:client_id"
+    output["data"] = ""
+    ret(output)
+  end
+
+  output = callapi.callapi(body, sign)
+elseif method == "/router_info" then
+  local tw = require "tw"
+  local data = {}
+
+  data["mac"] = tw.get_mac()
+  data["board"] = tw.get_model()
+  data["version"] = tw.get_version():match("^([^%s]+)")
+
+  output["code"] = "0"
+  output["msg"] = ""
+  output["data"] = data
+else
+  output["code"] = "100018"
+  output["msg"] = "未知的方法"
+  output["data"] = ""
+end
+
+ret(output)

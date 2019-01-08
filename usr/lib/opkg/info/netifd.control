@@ -1,0 +1,13 @@
+Package: netifd
+Version: 2012-09-29-6653b861748719ab58e21a81e01d59d4d8afe10c-20130313.1
+Depends: libc, libuci, libnl-tiny, libubus, ubus, ubusd, jshn
+Provides: 
+Source: package/network/config/netifd
+Section: base
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: ralink
+Installed-Size: 37702
+Description:  OpenWrt Network Interface Configuration Daemon

@@ -1,0 +1,8 @@
+
+config defaults
+	option ip_type 'dhcp'
+	option pppoe_name 'aaa'
+	option pppoe_passwd 'bbb'
+	option ifname 'eth2.2'
+	option selected 'dhcp'
+

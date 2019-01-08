@@ -1,0 +1,19 @@
+#!/bin/sh /etc/rc.common
+
+START=80
+
+start() {
+  [ "$(cat /etc/nginx/mode 2>/dev/null)" == "normal" ] && {
+    return 
+  }
+
+  insmod hwf_kproxy
+  lan_ipaddr=$(uci get network.lan.ipaddr)
+  kproxy -A -A ${lan_ipaddr}:81
+  kproxy-conf init
+}
+
+stop() {
+  rmmod hwf_kproxy
+}
+

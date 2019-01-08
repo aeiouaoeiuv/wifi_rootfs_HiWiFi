@@ -1,0 +1,37 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2006 OpenWrt.org
+
+START=20
+
+start()
+{
+	local file name
+	insmod ipt_salist
+	for file in /etc/salist/*.conf; do
+		name=`basename $file`
+		name=`expr "$name" : '\(.*\)\.conf'`
+		echo "+$name" > /proc/nf_salist/control
+		cat "$file" > /proc/nf_salist/$name
+	done
+}
+
+stop()
+{
+	rmmod ipt_salist
+}
+
+reload()
+{
+	local file name
+	for file in /etc/salist/*.conf; do
+		name=`basename $file`
+		name=`expr "$name" : '\(.*\)\.conf'`
+		if [ -e /proc/nf_salist/$name ]; then
+			echo clear > /proc/nf_salist/$name
+		else
+			echo "+$name" > /proc/nf_salist/control
+		fi
+		cat "$file" > /proc/nf_salist/$name
+	done
+}
+

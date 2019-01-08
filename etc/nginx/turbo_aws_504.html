@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width; initial-scale=0.7;  minimum-scale=0.5; maximum-scale=2.0"/>
+<title>您连接的网站响应超时</title>
+<style type="text/css">
+body, h1, h2, ul, li{margin: 0; padding: 0;}
+body{  text-align: center; font-family: Verdana, Arial, Sans-Serif; color: #333;}
+.box{ width: 90%; margin: 80px auto; text-align: left;}
+h1{ font-size: 30px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 15px; color: #006DD9;}
+h2{ font-size: 16px; margin: 15px 0;}
+ul{ padding-left: 20px;}
+li{ font-size: 13px; line-height: 200%; color: #666;}
+#detect{font-size:14px;font-weight: bold;margin-top:20px}
+small{color:#b2b2b2}
+</style>
+<script type="text/javascript">
+<!--
+	var url = encodeURI(location.href)
+	function toDetect(){		
+		location.href = "http://4006024680.com/cgi-bin/turbo/admin_web/system/net_detect?url=" + url;
+	}
+	function reload(){
+		window.location.reload();
+	}
+
+//-->
+</script>
+</head>
+<body>
+	<div class="box">
+	    <h1>您连接的网站响应超时</h1>
+		<small>504 Gateway Timeout</small>
+		<h2>出现此页面的原因及解决方法</h2>
+		<ul>
+		    <li>请稍后 <a href="#" onclick="reload()">重新加载</a> 此页面。</li>
+			<li>可能您点开链接的网站某些服务故障造成或者内容已过期。</li>
+			<li>地址中可能存在输入错误，请确认地址的准确性，重新打开浏览器访问。</li>		    
+		    <li>网速太慢，导致本来可以打开的页面因长时间无响应而无法显示，建议删除浏览器的历史记录、cookies等信息。</li>
+		    <li>可能是当地的相关部门对此网站作了限制，请确认该网站的有效性，也可以与当地相关部门或该网站的服务商联系确认。</li>
+		    <li>计算机自身系统等其他原因，建议联系系统管理员解决。</li>
+		</ul>
+		<div> <input type="button" id="detect" value="诊断网络" onclick="toDetect()"/></div>
+	</div>
+</body>
+</html>

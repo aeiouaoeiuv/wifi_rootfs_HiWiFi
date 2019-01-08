@@ -1,0 +1,13 @@
+Package: libubox
+Version: 2012-07-08-cca2ed6c8cdb3555fea43ff63ba1c9905dd7a164
+Depends: libc
+Provides: 
+Source: package/libs/libubox
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: ralink
+Installed-Size: 8150
+Description:  Basic utility library

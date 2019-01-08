@@ -1,0 +1,13 @@
+Package: hctools
+Version: 2.2-1.2
+Depends: libc, libbdinfo, libopenssl
+Provides: 
+Source: package/hctools
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Duke Wu <duke.wu@ikwcn.com>
+Architecture: all
+Installed-Size: 2898
+Description:  Provide supporting for board initialize and board reset.

@@ -1,0 +1,13 @@
+Package: libltdl
+Version: 2.4-1
+Depends: libc
+Provides: 
+Source: package/libs/libtool
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 12935
+Description:  A generic dynamic object loading library

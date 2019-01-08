@@ -1,0 +1,89 @@
+html,body,h1,h2,h3,h4,p,ul,li,input,textarea{ margin: 0; padding: 0;}
+body{ padding: 15px 0; text-align: center; font-family: Microsoft Yahei,Helvetica,Arial,sans-serif; font-size: 1em; color: #666; line-height: 1.5;}
+div{ display: block;}
+h1,h2,h3,h4{ font-weight: 300;}
+h1{ font-size: 1.2em;}
+h2{ font-size: 1em;}
+h3{ font-size: .8em;}
+ul,li{ list-style: none;}
+input,textarea{ width: 100%; padding: .5em 0; border: none; background: none; font-size: 16px;}
+button{ width: 100%; border: none; font-weight: 700;}
+label{ clear: both; display: block; text-align: left;}
+cite{ font-style: normal;}
+em{ font-style: normal;}
+a{ color: #00B3FC;}
+a:actived{ text-decoration: none;}
+
+/* 页面元素 */
+.fl{ float: left;}
+.fr{ float: right;}
+.tl{ text-align: left;}
+.tr{ text-align: right;}
+.tc{ text-align: center;}
+.inline{ display:inline-block;}
+.badge{ display: block; width: 48px; height: 48px; line-height: 54px; background: #00B3FC; font-weight: 300; text-align: center; font-size: 1.2em; color: #fff;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+}
+.box{ background: #f8f8f8; padding: 10px; margin-bottom: 15px;}
+.tips{ clear: both; margin: .5em 0; font-size: .8em;}
+.error{ padding: .8em 0; color: red;}
+.txt{ display: block; border: 1px solid #c8c7c5; margin: .5em 0; padding: 0 .5em;}
+.checkbox{ clear: both; margin-bottom: .5em;}
+.checkbox label input{ float: left; width: auto; margin: 4px 8px 0 0;}
+.btn{ margin: .5em 0; padding: .8em 20px; background: #00B3FC; font-size: 16px; color: #fff;}
+.btn.big{ margin: 1em 0; padding: 1em 20px;}
+a.btn{ display: block; text-decoration: none; font-weight: 700;}
+.btn.disabled{ background: #cecece;}
+.btn.grey{ background: #cecece;}
+.btn.inline{ width: 48%; padding: .8em 0;}
+.icon_error{ width: 20px; height: 20px; display: inline-block; margin-right: 10px; position: relative; top:4px;  background: url(../image/icon_error.png); background-size: 20px auto;}
+
+/* 布局 */
+#header, #footer, #content{ padding: 0 15px;}
+#content{ min-height: 220px;}
+
+/* 头部 */
+#header{ padding:  15px 15px 30px;}
+#header h1{ margin: 15px 0;}
+#header h2{ margin-bottom: 30px;}
+
+/* 底部 */
+#footer{ clear: both; padding: 30px 0; color: #999;}
+
+/* 协议页 */
+.box textarea{ border: none; background: none; overflow: auto; min-height: 200px; font-size: .8em;}
+
+/* 无线密码修改页 */
+#step2 .txt.fl{ width: 20%;}
+#step2 .txt.fr{ width: 65%;}
+
+/* 拨号上网页 */
+#tel{ margin: 0 5px;}
+#numbers{ display: none; margin: 15px 0; text-align: left;}
+#numbers li{ display: inline-block; padding: 5px;}
+#numbers li a{ margin: 0 5px;}
+
+/* 设置完成页 */
+#finish #content{ padding: 30px 0;}
+#finish #content h3 cite{ margin: 15px 0; display: block; color: #00B3FC; font-size: 16px;}
+
+/* 一键设置 */
+#onekey #content{ padding: 60px 15%;}
+
+/* 网线检测页 */
+#check h1{ font-size: 1em;}
+#check #sockets{ margin: 30px 0; height: 192px; overflow: hidden;}
+#check #sockets li{ display: inline-block; width: 72px; height: 86px; margin: 0 5px;}
+#check #sockets li h4{ height: 30px; line-height: 30px; font-weight: 300; font-size: 10px; color: #999;}
+#check #sockets li .icon{ display: block; height: 56px; background: url(../image/sockets.png) no-repeat; background-size: 72px auto;}
+#check #sockets li.lan .icon{ background-position: 0 -56px;}
+#check #sockets li.lan.yes .icon{ background-position: 0 -112px;}
+#check #sockets li.wan{ height: 106px;}
+#check #sockets li.wan #stream{ display: block; height: 106px; background: url(../image/stream.gif);}
+
+/* for pc */
+@media  (min-width: 768px){
+#content{ padding: 0 15%;}
+}

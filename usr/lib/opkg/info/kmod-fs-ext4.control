@@ -1,0 +1,13 @@
+Package: kmod-fs-ext4
+Version: 3.3.8-1
+Depends: kmod-lib-crc16
+Provides: 
+Source: package/kernel/linux
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 189902
+Description:  Kernel module for EXT4 filesystem support

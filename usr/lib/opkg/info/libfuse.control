@@ -1,0 +1,16 @@
+Package: libfuse
+Version: 2.9.0-2
+Depends: libc, kmod-fuse, libpthread
+Provides: 
+Source: package/fuse
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 60609
+Description:  FUSE (Filesystem in UserSpacE)
+ This package contains the FUSE shared libraries, needed by other programs.
+ - libfuse
+ - libulockmgr

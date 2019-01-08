@@ -1,0 +1,13 @@
+Package: wisp_chk
+Version: 1-2
+Depends: libc
+Provides: 
+Source: package/network/services/wisp_chk
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 800
+Description:  Check wlan1 can access internet or not forever.

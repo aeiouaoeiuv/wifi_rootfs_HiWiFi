@@ -1,0 +1,13 @@
+Package: fcgi-cgi
+Version: 0.1.8-20130910.1
+Depends: libc, libev, spawn-fcgi, glib2
+Provides: 
+Source: /home/release/branch/release0.9003/HC5761/package/fcgi-cgi
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 10108
+Description:  fcgi-cgi is used to spawn fastcgi applications

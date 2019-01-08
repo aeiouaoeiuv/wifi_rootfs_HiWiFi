@@ -1,0 +1,7 @@
+#!/bin/sh
+
+start() {
+  lua -e 'local mq = require "hiwifi.mq"; mq.process();'
+}
+
+start

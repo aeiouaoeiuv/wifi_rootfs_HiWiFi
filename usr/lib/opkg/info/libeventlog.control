@@ -1,0 +1,13 @@
+Package: libeventlog
+Version: 0.2.9-2
+Depends: libc
+Provides: 
+Source: package/libs/eventlog
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 5439
+Description:  A new API to format and send structured log messages.

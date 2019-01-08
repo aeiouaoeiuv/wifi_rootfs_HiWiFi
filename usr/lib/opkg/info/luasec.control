@@ -1,0 +1,13 @@
+Package: luasec
+Version: 0.4-4f37552d6f0b9f416059a8245fcf237d1c585733-iridium77.20130419.1
+Depends: libc, lua, libopenssl, luasocket
+Provides: 
+Source: package/luasec
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 11556
+Description:  LuaSec is a binding for OpenSSL library to provide TLS/SSL communication.

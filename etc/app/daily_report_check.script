@@ -1,0 +1,34 @@
+crontab_file=/etc/crontabs/root
+key='daily_report_check'
+
+random() {
+  min=$1
+  max=$2
+  num=$(date +%s)
+  retnum=$((num % max + min))
+  echo $retnum
+}
+
+start() {
+  stop
+  sed -i '/^$/d' $crontab_file
+  echo "" >> $crontab_file
+  min=$(random 0 60)
+  # 20 - 21
+  pad=$(random 0 2)
+  hour=$((pad + 20))
+  echo "$min $hour * * * lua /etc/app/daily_report.lua #daily_report_check" >> $crontab_file
+  echo "" >> $crontab_file
+  /etc/init.d/cron stop
+  /etc/init.d/cron start
+  return 0
+}
+
+stop() {
+  sed -i '/#daily_report_check$/d' $crontab_file
+  /etc/init.d/cron stop
+  /etc/init.d/cron start
+  return 0
+}
+
+$1 $2

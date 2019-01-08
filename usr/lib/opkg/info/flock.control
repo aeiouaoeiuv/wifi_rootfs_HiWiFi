@@ -1,0 +1,13 @@
+Package: flock
+Version: 2.21.2-1
+Depends: libc
+Provides: 
+Source: package/util-linux
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 6010
+Description:  manages flock locks from within shell scripts or the command line

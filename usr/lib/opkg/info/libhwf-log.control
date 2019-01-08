@@ -1,0 +1,13 @@
+Package: libhwf-log
+Version: 0.1-20140408
+Depends: libc
+Provides: 
+Source: /home/release/branch/release0.9003/HC5761/package/libhwf-log
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 2090
+Description:  use SIGUSR1 to control the log level

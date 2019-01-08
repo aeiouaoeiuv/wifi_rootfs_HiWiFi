@@ -1,0 +1,16 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+
+start() {
+	rm /etc/hosts.d/openapi
+
+	local lan_ip=$(uci get network.lan.ipaddr)
+	echo "$lan_ip client.openapi.hiwifi.com" >> /etc/hosts.d/openapi
+	/etc/init.d/dnsmasq restart
+}
+
+stop() {
+	rm /etc/hosts.d/openapi
+	/etc/init.d/dnsmasq restart
+}

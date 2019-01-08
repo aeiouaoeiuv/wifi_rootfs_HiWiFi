@@ -1,0 +1,13 @@
+Package: hwf-openapi
+Version: 0.0.2-20140717.1
+Depends: libc, lua-setuid, hwf-cert
+Provides: 
+Source: /home/longfei.qiao/ROOM/package/hwf-openapi
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: longfei.qiao
+Architecture: ralink
+Installed-Size: 45094
+Description:  hwf-openapi

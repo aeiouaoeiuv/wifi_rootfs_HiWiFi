@@ -1,0 +1,13 @@
+Package: kmod-salist
+Version: 3.3.8-20140303
+Depends: kmod-ipt-core
+Provides: 
+Source: /home/release/branch/release0.9003/HC5661/package/xt_salist
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 6169
+Description:  Simple address list Netfilter match module

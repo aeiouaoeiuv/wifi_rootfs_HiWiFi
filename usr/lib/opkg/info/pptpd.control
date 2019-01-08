@@ -1,0 +1,13 @@
+Package: pptpd
+Version: 1.3.4-2
+Depends: libc, kmod-ppp, kmod-gre, ppp
+Provides: 
+Source: feeds/packages/net/pptpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 26612
+Description:  PopTop pptp server

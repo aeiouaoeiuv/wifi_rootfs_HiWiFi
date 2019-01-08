@@ -1,0 +1,24 @@
+# This file is automatically maintained by lvm.
+
+persistent_filter_cache {
+	valid_devices=[
+		"/dev/ram11",
+		"/dev/ram10",
+		"/dev/ram12",
+		"/dev/ram6",
+		"/dev/ram13",
+		"/dev/ram14",
+		"/dev/ram5",
+		"/dev/ram1",
+		"/dev/mmcblk0p2",
+		"/dev/ram0",
+		"/dev/ram2",
+		"/dev/ram8",
+		"/dev/ram9",
+		"/dev/mmcblk0p1",
+		"/dev/ram15",
+		"/dev/ram3",
+		"/dev/ram4",
+		"/dev/ram7"
+	]
+}

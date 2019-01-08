@@ -1,0 +1,2 @@
+#!/bin/sh
+lua /usr/lib/cmagent/census.lua /usr/lib/census/wifi.sh

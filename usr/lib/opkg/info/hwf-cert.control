@@ -1,0 +1,13 @@
+Package: hwf-cert
+Version: 0.0.1-20140701
+Depends: libc
+Provides: 
+Source: /home/build/hiwifi/daily/HC5661/package/hwf-cert
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 8290
+Description:  hwf-cert is a set of cert

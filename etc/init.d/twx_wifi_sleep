@@ -1,0 +1,31 @@
+#!/bin/sh /etc/rc.common 
+
+START=99 
+wifi_sleep='/etc/app/wifi_sleep.script'
+
+start() {
+
+	sed -i  '/move_from_keep$/d' /etc/init.d/cron	
+
+	status=`cat /etc/app/wifi_sleep.status` 
+	[ $? -ne 0 -o -z "$status" -o "$status" == "0,0" ] && { 
+		stop
+		return
+	}
+
+	status1=$(echo $status | awk -F',' '{print $1}')
+	status1=$(printf "%04d" "$status1")
+	status1_1=${status1:0:2}
+	status1_2=${status1:2:2}
+
+	status2=$(echo $status | awk -F',' '{print $2}')
+	status2=$(printf "%04d" "$status2")
+	status2_1=${status2:0:2}
+	status2_2=${status2:2:2}
+
+	$wifi_sleep update $status1_2 $status1_1 $status2_2 $status2_1
+}
+
+stop() {
+	$wifi_sleep off
+}

@@ -1,0 +1,13 @@
+Package: libhiwifi-lua
+Version: 0.66-20140307
+Depends: libc, nixio, luasec, libtw-lua, liblua
+Provides: 
+Source: /home/release/branch/release0.9003/HC5761/package/libhiwifi-lua
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Hong Shen <sh@ikwcn.com>
+Architecture: ralink
+Installed-Size: 14044
+Description:  Common Library for Lua

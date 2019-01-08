@@ -1,0 +1,3 @@
+/usr/sbin/hwfatd
+/etc/init.d/hwfatd
+/usr/sbin/hwf-at

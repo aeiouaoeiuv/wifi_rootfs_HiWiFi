@@ -1,0 +1,15 @@
+Package: kmod-ipt-nat
+Version: 3.3.8-1
+Depends: kmod-ipt-core, kmod-ipt-conntrack
+Provides: 
+Source: package/kernel/linux
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 10417
+Description:  Netfilter (IPv4) kernel modules for basic NAT targets
+ Includes:
+ - MASQUERADE

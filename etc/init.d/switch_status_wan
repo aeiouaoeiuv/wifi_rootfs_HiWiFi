@@ -1,0 +1,21 @@
+#!/bin/sh /etc/rc.common
+
+UCI_OPTION='switch_status.wan'
+
+START=99
+STOP=90
+
+start() {
+    switch_status=$(uci get "$UCI_OPTION" 2>/dev/null)
+    if [ "$switch_status" == "10half" -o "$switch_status" == "10full" -o "$switch_status" == "100half" -o "$switch_status" == "100full" -o "$switch_status" == "auto" ]; then
+        switch status wan "$switch_status"
+        rstcode=$(echo $?)
+        echo "set switch_status=${switch_status} code=${rstcode}" >>/tmp/wcy.log
+    else
+        echo "error switch_status=${switch_status}" >>/tmp/wcy.log
+    fi
+}
+
+stop() {
+  return 0
+}

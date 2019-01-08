@@ -1,0 +1,13 @@
+Package: firewall
+Version: 2-61
+Depends: libc, iptables, kmod-ipt-conntrack, kmod-ipt-nat
+Provides: 
+Source: package/network/config/firewall
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Jo-Philipp Wich <xm@subsignal.org>
+Architecture: all
+Installed-Size: 12991
+Description:  UCI based firewall for OpenWrt

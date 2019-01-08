@@ -1,0 +1,5 @@
+/etc/ppp/ip-up.d/30-salist-up.sh
+/lib/vpn/vpn.sh
+/etc/vpn/hostlist
+/etc/vpn/iplist
+/etc/ppp/ip-down.d/30-salist-down.sh

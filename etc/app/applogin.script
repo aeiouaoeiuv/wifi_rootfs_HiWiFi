@@ -1,0 +1,39 @@
+LOCAL_KEY='oLKmbg1g'
+APP_LOGIN_AUTH_FILE='/etc/app/appcloudkey' #no use
+
+putkey() {	#no use
+  echo "$1" | grep -q -E "^[a-z0-9_]+$"
+  if [ $(echo $?) != 0 ]; then
+    return 1
+  fi
+  touch "${APP_LOGIN_AUTH_FILE}"
+  echo "$1" >"${APP_LOGIN_AUTH_FILE}"
+  return 0
+}
+
+validate() {
+  userkey="$1"
+  randkey="$2"
+  echo "${userkey}" | grep -q -E "^[a-f0-9]{32}$"
+  if [ $(echo $?) != 0 ]; then
+    echo false
+    return 1
+  fi
+  echo "${randkey}" | grep -q -E "^[a-f0-9]{8,}$"
+  if [ $(echo $?) != 0 ]; then
+    echo false
+    return 1
+  fi
+  
+  ls /etc/openapi.d/13/*/client_secret|while read line; do 
+ 	 key=$(cat $line)
+	 sign=$(echo -n "$LOCAL_KEY""${key}""${randkey}"|md5sum|awk '{print $1}')
+	 if [ ${userkey} == "${sign}" ] 2>/dev/null; then
+	   echo true
+	   return 0
+	 fi
+  done
+
+  #false will not echo          
+  return 1 
+}

@@ -1,0 +1,4 @@
+/etc/firewall.d/10-shadowsocks
+/etc/ss/ss-init
+/usr/sbin/ss-redir
+/etc/ss/ss-lib

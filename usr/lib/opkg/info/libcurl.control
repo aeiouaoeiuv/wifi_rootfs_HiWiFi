@@ -1,0 +1,13 @@
+Package: libcurl
+Version: 7.34.0-3
+Depends: libc, libopenssl, zlib
+Provides: 
+Source: package/network/utils/curl
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 142386
+Description:  A client-side URL transfer library

@@ -1,0 +1,39 @@
+#!/bin/sh /etc/rc.common
+
+START=80
+
+start() {
+  [ "$(cat /etc/nginx/mode 2>/dev/null)" == "normal" ] && {
+    return
+  }
+
+  insmod hwf_smartqos 2> /dev/null
+  if [ -e /etc/app/device_qos ]; then
+    cp /etc/app/device_qos /tmp/device_qos
+    echo >> /tmp/device_qos
+    while read mac down up user; do 
+      echo "$mac $down $up" > /proc/net/smartqos/config
+    done < /tmp/device_qos
+    rm -f /tmp/device_qos
+  fi
+
+  enabled=$(uci get smartqos.@smartqos[0].enabled 2>/dev/null)
+  [ "${enabled:-0}" -eq 0 ] && {
+    stop
+    return 0
+  } 
+
+  down=$(uci get smartqos.@smartqos[0].down 2>/dev/null)
+  down=$((down / 8))
+  echo $down >/proc/sys/net/smartqos/download_bw
+
+  up=$(uci get smartqos.@smartqos[0].up 2>/dev/null)
+  up=$((up / 8))
+  echo $up >/proc/sys/net/smartqos/upload_bw
+}
+
+stop() {
+  echo 0 >/proc/sys/net/smartqos/download_bw
+  echo 0 >/proc/sys/net/smartqos/upload_bw
+}
+

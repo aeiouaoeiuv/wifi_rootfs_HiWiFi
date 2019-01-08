@@ -1,0 +1,3 @@
+/lib/modules/3.3.8/mtk_sd.ko
+/etc/modules.d/92-mmc-mtk-mc-host
+/etc/modules-boot.d/92-mmc-mtk-mc-host

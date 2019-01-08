@@ -1,0 +1,22 @@
+#!/bin/sh /etc/rc.common
+# Copyright (c) 2013 Elite Co., Ltd.
+# Author: Hong Shen <sh@ikwcn.com>
+
+START=99
+
+SERVICE_DAEMONIZE=1
+
+MARKET_BIN=/etc/cron/360/market_report_installed_apps
+
+start() {
+  service_start $MARKET_BIN
+}
+
+stop() {
+  service_stop $MARKET_BIN
+}
+
+restart() {
+	stop
+	start
+}

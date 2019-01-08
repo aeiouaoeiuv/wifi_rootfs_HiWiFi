@@ -1,0 +1,6 @@
+/usr/lib/census/wifi.sh
+/etc/cron/1440/error
+/etc/cron/1440/system
+/usr/lib/census/error.sh
+/etc/cron/60/wifi
+/usr/lib/census/system.sh

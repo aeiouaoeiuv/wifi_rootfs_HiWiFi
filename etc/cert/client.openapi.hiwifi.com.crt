@@ -1,0 +1,95 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=CN, ST=Beijing, L=Beijing, O=Beijing Geek-Geek Technology  Co., Ltd., OU=OPENAPI, CN=openapi.hiwifi.com/emailAddress=domain@hiwifi.tw
+        Validity
+            Not Before: Jun 29 03:21:48 2014 GMT
+            Not After : Sep 15 03:21:48 2022 GMT
+        Subject: C=CN, ST=Beijing, O=Beijing Geek-Geek Technology  Co., Ltd., OU=CLIENT, CN=client.openapi.hiwifi.com/emailAddress=domain@hiwifi.tw
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:c1:9b:01:ca:2e:8d:89:23:77:fd:df:2b:ba:8d:
+                    78:37:61:fe:2d:5d:d4:7a:df:a1:a6:30:85:45:13:
+                    d6:80:b4:91:ec:9a:1a:b6:0e:6b:f9:ae:e2:53:d7:
+                    56:0b:b6:f0:ba:bf:06:de:36:2c:af:4b:27:7b:6f:
+                    40:73:49:40:73:f1:7b:d7:c5:e6:ab:51:35:af:9d:
+                    81:22:d2:ff:82:bd:0b:bb:22:99:87:6d:0d:f9:80:
+                    a1:aa:97:d9:3d:02:b0:c7:10:5c:2c:10:77:c1:27:
+                    f7:ad:03:99:30:b5:06:64:f3:c3:fe:10:64:84:26:
+                    49:61:cf:54:07:5c:ad:aa:3f
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                1A:75:4E:8D:89:C2:3F:E6:B4:CD:CB:BD:D4:37:7E:B5:5D:E0:35:B2
+            X509v3 Authority Key Identifier: 
+                keyid:1C:C5:73:93:EF:3E:8C:D2:97:39:DE:95:B7:A2:72:1B:48:75:0C:CA
+
+            X509v3 Basic Constraints: 
+                CA:TRUE
+    Signature Algorithm: sha1WithRSAEncryption
+         12:01:3b:e4:04:ca:e1:2d:ce:56:75:f4:a7:69:ad:96:b5:5a:
+         87:a8:c9:9a:97:94:6f:51:a8:02:91:f5:c5:e4:e6:46:bf:63:
+         1b:99:dc:c7:27:09:cd:07:c2:73:ec:49:c7:56:7c:e2:0d:22:
+         a0:f5:b7:94:33:1f:80:6a:28:44:9a:ff:37:33:59:fa:e5:c9:
+         f3:ee:31:07:23:a7:1b:e4:0c:20:3b:73:2b:f9:ce:5b:34:aa:
+         6c:ce:48:62:53:d1:1d:40:da:21:97:11:f3:6a:78:b3:85:28:
+         62:ed:a5:e7:36:94:af:b9:5f:ea:12:e8:33:80:f3:82:bb:91:
+         cd:4a:28:5e:70:df:a6:df:04:37:6e:ba:7f:28:14:b2:01:eb:
+         53:c5:2c:e4:9c:84:84:4d:7f:e6:87:86:78:78:40:46:2e:e6:
+         5a:54:3c:81:e2:e8:ea:21:c5:e8:e5:f4:73:c7:47:19:c6:64:
+         e0:e1:ac:4c:67:e1:fa:ad:3e:cd:85:b4:a6:b6:63:c4:6e:57:
+         0f:a9:6f:51:e1:5d:69:f1:d4:3b:86:0b:51:ed:6f:6c:d7:4d:
+         f8:c0:bc:e1:9c:fd:07:44:7c:ee:b1:51:2f:b6:d5:43:5b:6d:
+         16:b9:83:42:46:01:c5:5a:ef:9e:f3:aa:f4:34:3e:e0:a4:e3:
+         f8:1f:00:ae
+-----BEGIN CERTIFICATE-----
+MIIDozCCAougAwIBAgIBATANBgkqhkiG9w0BAQUFADCBszELMAkGA1UEBhMCQ04x
+EDAOBgNVBAgMB0JlaWppbmcxEDAOBgNVBAcMB0JlaWppbmcxMDAuBgNVBAoMJ0Jl
+aWppbmcgR2Vlay1HZWVrIFRlY2hub2xvZ3kgIENvLiwgTHRkLjEQMA4GA1UECwwH
+T1BFTkFQSTEbMBkGA1UEAwwSb3BlbmFwaS5oaXdpZmkuY29tMR8wHQYJKoZIhvcN
+AQkBFhBkb21haW5AaGl3aWZpLnR3MB4XDTE0MDYyOTAzMjE0OFoXDTIyMDkxNTAz
+MjE0OFowgacxCzAJBgNVBAYTAkNOMRAwDgYDVQQIDAdCZWlqaW5nMTAwLgYDVQQK
+DCdCZWlqaW5nIEdlZWstR2VlayBUZWNobm9sb2d5ICBDby4sIEx0ZC4xDzANBgNV
+BAsMBkNMSUVOVDEiMCAGA1UEAwwZY2xpZW50Lm9wZW5hcGkuaGl3aWZpLmNvbTEf
+MB0GCSqGSIb3DQEJARYQZG9tYWluQGhpd2lmaS50dzCBnzANBgkqhkiG9w0BAQEF
+AAOBjQAwgYkCgYEAwZsByi6NiSN3/d8ruo14N2H+LV3Uet+hpjCFRRPWgLSR7Joa
+tg5r+a7iU9dWC7bwur8G3jYsr0sne29Ac0lAc/F718Xmq1E1r52BItL/gr0LuyKZ
+h20N+YChqpfZPQKwxxBcLBB3wSf3rQOZMLUGZPPD/hBkhCZJYc9UB1ytqj8CAwEA
+AaNQME4wHQYDVR0OBBYEFBp1To2Jwj/mtM3LvdQ3frVd4DWyMB8GA1UdIwQYMBaA
+FBzFc5PvPozSlznelbeichtIdQzKMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEF
+BQADggEBABIBO+QEyuEtzlZ19KdprZa1WoeoyZqXlG9RqAKR9cXk5ka/YxuZ3Mcn
+Cc0HwnPsScdWfOINIqD1t5QzH4BqKESa/zczWfrlyfPuMQcjpxvkDCA7cyv5zls0
+qmzOSGJT0R1A2iGXEfNqeLOFKGLtpec2lK+5X+oS6DOA84K7kc1KKF5w36bfBDdu
+un8oFLIB61PFLOSchIRNf+aHhnh4QEYu5lpUPIHi6Oohxejl9HPHRxnGZODhrExn
+4fqtPs2FtKa2Y8RuVw+pb1HhXWnx1DuGC1Htb2zXTfjAvOGc/QdEfO6xUS+21UNb
+bRa5g0JGAcVa757zqvQ0PuCk4/gfAK4=
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+MIIEOzCCAyOgAwIBAgIJAMhFrm95bDlkMA0GCSqGSIb3DQEBBQUAMIGzMQswCQYD
+VQQGEwJDTjEQMA4GA1UECAwHQmVpamluZzEQMA4GA1UEBwwHQmVpamluZzEwMC4G
+A1UECgwnQmVpamluZyBHZWVrLUdlZWsgVGVjaG5vbG9neSAgQ28uLCBMdGQuMRAw
+DgYDVQQLDAdPUEVOQVBJMRswGQYDVQQDDBJvcGVuYXBpLmhpd2lmaS5jb20xHzAd
+BgkqhkiG9w0BCQEWEGRvbWFpbkBoaXdpZmkudHcwHhcNMTQwNjI5MDMwNzA4WhcN
+MjQwNjI2MDMwNzA4WjCBszELMAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaWppbmcx
+EDAOBgNVBAcMB0JlaWppbmcxMDAuBgNVBAoMJ0JlaWppbmcgR2Vlay1HZWVrIFRl
+Y2hub2xvZ3kgIENvLiwgTHRkLjEQMA4GA1UECwwHT1BFTkFQSTEbMBkGA1UEAwwS
+b3BlbmFwaS5oaXdpZmkuY29tMR8wHQYJKoZIhvcNAQkBFhBkb21haW5AaGl3aWZp
+LnR3MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsWGdWA4dCzJPIRnV
+IbrS6lBID4ELTvfnnbsgeF4/5DBePkSsezydSd/grYq6qF4JK8vvxiqefH/Kg2Z1
+4S5FWjyqMKRy8WEs4KWE8cndvLzMm0LujoHJmFA3eS4vBa62KseAQXdXElsDSGdO
+4Vky1suiRXB409ZMNmD2FNsclYcOYoq1dBMHtnUoeqNsTUEQ/rxxTKmMj9bP3FuK
+tiFfg4qN/K9WIMhWpMrC3DHHFauZiEv2jcy/qjnH+KUAYjzcJ9ly/EaBTS3Det1P
+4oqhgn3oStxr4gI0kTZSlV3ASiIcvdec35+oBhutTaSmqBvKCri/XksCeRsh3B8t
+453w/wIDAQABo1AwTjAdBgNVHQ4EFgQUHMVzk+8+jNKXOd6Vt6JyG0h1DMowHwYD
+VR0jBBgwFoAUHMVzk+8+jNKXOd6Vt6JyG0h1DMowDAYDVR0TBAUwAwEB/zANBgkq
+hkiG9w0BAQUFAAOCAQEAUdOXdX/WujaY8AkALcv6DxPvIKabj0XzrHrbPAPBGJhb
+Ng3F7PivOP4kvdU7u1Dr8EwlVjh+AQLVh1M2+4wNG+CmNi4eSunsum3jb09z/D8J
+/OaE4hZ+RkuZJ7+UvegcoNdsWka87hBJzAggBkU84LuQ8eQpFxe04p4BVWOqxKC1
+JqpmjfLjGIreURuQpICYkbhUuoDqGesgbK8cDPtsh8uU6MYLztTPns6vLBJNF43+
+Cg1cqF77EM4R/4Hvj3aEJJ55zJr3jxC3ZuZs9n3VtYwDOqj7OFQmRZhcJm7UhuWl
+YNdBb46LFn2LqOVfd4JnJT30iBu1pTnA33/KdPYXNA==
+-----END CERTIFICATE-----

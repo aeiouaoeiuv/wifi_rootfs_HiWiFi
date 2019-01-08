@@ -1,0 +1,14 @@
+Package: mentohust
+Version: 0.3.1-20130930.2
+Depends: libc, libpcap
+Provides: 
+Source: package/network/services/mentohust
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 19193
+Description:  802.1X client compatible with RuiJie.
+ Support <ALL> RuiJie clients!

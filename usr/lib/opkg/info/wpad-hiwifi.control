@@ -1,0 +1,13 @@
+Package: wpad-hiwifi
+Version: 1.0-20140701
+Depends: libc, libuci, libcurl, hwf-cert
+Provides: 
+Source: package/network/services/wpad-hiwifi
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Abu Cheng <abu.zheng@hiwifi.tw>
+Architecture: ralink
+Installed-Size: 73846
+Description:  This package contains a IEEE 802.1x/WPA Authenticator.

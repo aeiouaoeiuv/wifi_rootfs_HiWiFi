@@ -1,0 +1,13 @@
+Package: libbdinfo
+Version: 1-1
+Depends: libc, libopenssl
+Provides: 
+Source: package/bdinfo
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Duke Wu <duke.wu@ikwcn.com>
+Architecture: all
+Installed-Size: 4281
+Description:  Provide supporting for parsing hardcore board information.

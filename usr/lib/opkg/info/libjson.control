@@ -1,0 +1,13 @@
+Package: libjson
+Version: 0.9-2
+Depends: libc
+Provides: 
+Source: package/libs/libjson-c
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: ralink
+Installed-Size: 9471
+Description:  This package contains a library for javascript object notation backends.

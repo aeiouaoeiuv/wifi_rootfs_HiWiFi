@@ -1,0 +1,1846 @@
+Package: kmod-usb-storage
+Version: 3.3.8-1
+Depends: kmod-scsi-core, kmod-usb-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: terminfo
+Version: 5.7-5
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: libuci-lua
+Version: 2012-03-28.1-1
+Depends: libc, libuci, liblua
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: libauth
+Version: 64-20140109
+Depends: libc, libtw, libbdinfo, libcurl, libopenssl
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: kmod-lib-textsearch
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: libc
+Version: 0.9.33.2-1
+Depends: libgcc
+Provides:
+Status: install hold installed
+Essential: yes
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: kmod-l2tp
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+Auto-Installed: yes
+
+Package: kmod-macvlan
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: twx
+Version: 2130-20140415
+Depends: libc, nixio, lua, luasec, lsqlite3, libtw-lua, libhiwifi-lua, libauth
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: kmod-rt2860v2_ap
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: opkg
+Version: 618-2-curl2.20130926.1
+Depends: libc, libcurl
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/opkg.conf d8791a9f869262b0504415e0ff63bb44
+Installed-Time: 1397567694
+
+Package: kmod-usb-core
+Version: 3.3.8-1
+Depends: kmod-nls-base
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+Auto-Installed: yes
+
+Package: ip
+Version: 3.3.0-1
+Depends: libc, libnl-tiny
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/iproute2/rt_tables a1313318d6778fe6b8c680248ef5a463
+Installed-Time: 1397567692
+
+Package: libevent2-openssl
+Version: 2.0.21-2
+Depends: libc, libopenssl
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: libpthread
+Version: 0.9.33.2-1
+Depends: libgcc
+Provides:
+Status: install hold installed
+Essential: yes
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: ubus
+Version: 2012-06-01-a62e2f8c15a65efb1a82404d8f31e3bfc1cbe7d9
+Depends: libc, libubus, libblobmsg-json, ubusd
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: hwf-cert
+Version: 0.0.1-20140701
+Depends: libc
+Provides:
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1431946348
+Auto-Installed: yes
+
+Package: kmod-ide-core
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: kmod-crypto-manager
+Version: 3.3.8-1
+Depends: kmod-crypto-hash, kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: busybox
+Version: 1.19.4-20140224
+Depends: libc, librpc, libbdinfo, libtw
+Provides:
+Status: install user installed
+Essential: yes
+Architecture: ralink
+Installed-Time: 1397567691
+
+Package: census
+Version: 1.0.1-20140409
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+
+Package: lsof
+Version: 4.86-1
+Depends: libc, librpc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1432015734
+
+Package: turbo-beta
+Version: 1.0.8-20130327
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: kmod-crypto-iv
+Version: 3.3.8-1
+Depends: kmod-crypto-manager, kmod-crypto-rng, kmod-crypto-wq, kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libubus-lua
+Version: 2012-06-01-a62e2f8c15a65efb1a82404d8f31e3bfc1cbe7d9
+Depends: libc, libubus, liblua
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: kmod-crypto-hash
+Version: 3.3.8-1
+Depends: kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: kmod-tun
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: glib2
+Version: 2.26.1-3
+Depends: libc, zlib, libpthread
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: swconfig
+Version: 10
+Depends: libc, libuci, libnl-tiny
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: libhwf-log
+Version: 0.1-20140408
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: libcurl
+Version: 7.34.0-3
+Depends: libc, libopenssl, zlib
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: kmod-ipt-filter
+Version: 3.3.8-1
+Depends: kmod-ipt-core, kmod-lib-textsearch
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: kmod-lib-crc-ccitt
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-ledtrig-usbdev
+Version: 3.3.8-1
+Depends: kmod-usb-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: lua-setuid
+Version: 1-20140521
+Depends: libc, liblua
+Provides:
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1431946350
+Auto-Installed: yes
+
+Package: lvm2
+Version: 2.02.96-1
+Depends: libc, libdevmapper, libreadline, libncurses
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/lvm/lvm.conf acf3b4ad97d107260d9e8d98c85624f6
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: speedtest-upload
+Version: 0.0.1-20140226
+Depends: libc, libstdcpp
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: kmod-ipt-nat-extra
+Version: 3.3.8-1
+Depends: kmod-ipt-core, kmod-ipt-nat
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: shadowsocks
+Version: master-20130924-eb9d31869e1d7590cd8c2fb1e7d226ac6cf32fad-20140124.1
+Depends: libc, libopenssl, libauth, libtw, libhwf-log
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: kproxy-tools
+Version: 1.0.0-20140211
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: all
+Installed-Time: 1397567692
+
+Package: libgcrypt
+Version: 1.5.0-1
+Depends: libc, libgpg-error
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: libev
+Version: 4.11-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: kmod-gre
+Version: 3.3.8-1
+Depends: kmod-ipv6
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-pppoe
+Version: 3.3.8-1
+Depends: kmod-ppp, kmod-pppox
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: hwf-openapi
+Version: 0.0.2-20140717.1
+Depends: libc, lua-setuid, hwf-cert
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/config/network-conf d41d8cd98f00b204e9800998ecf8427e
+Installed-Time: 1431946352
+
+Package: hwfatd
+Version: 0.1-20131218.1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: cmagent
+Version: 0.53-20140408
+Depends: libc, libevent2, libevent2-openssl, jansson, libtw, lua, libhiwifi-lua, nixio, luasec, libtw-lua, libauth, libhwf-log
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+
+Package: kmod-pppox
+Version: 3.3.8-1
+Depends: kmod-ppp
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: salist
+Version: 20140303
+Depends: libc, kmod-salist
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: kmod-ipt-conntrack
+Version: 3.3.8-1
+Depends: kmod-ipt-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: base-files
+Version: 118.20140415-0.9003.2446s
+Depends: libc, netifd
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/group 4a116d818b2f49e14939d581ec786de1
+ /etc/passwd 8a31e6d3e2d67fc7b99f56055e9d802b
+ /etc/shadow 497b070fd6e487f137756e9bce95b636
+ /etc/shells 725ba6f40dff0612f61ecd3f171bb3e1
+ /etc/rc.local 6f8bfdaf36d3ec4aa9be6e96fa61d32b
+ /etc/sysupgrade.conf f91aef484370cefee501d64b5725c1d2
+ /etc/config/bridge 2c277fb9318d28efacb5af3caf8f3899
+ /etc/config/system 187c79a55a4420937216daeb3cbe8523
+Installed-Time: 1397567690
+
+Package: kmod-lib-crc16
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+Auto-Installed: yes
+
+Package: libcom_err
+Version: 1.42.4-1
+Depends: libc, libpthread
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: libpcre
+Version: 8.11-2
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+Auto-Installed: yes
+
+Package: netifd
+Version: 2012-09-29-6653b861748719ab58e21a81e01d59d4d8afe10c-20130313.1
+Depends: libc, libuci, libnl-tiny, libubus, ubus, ubusd, jshn
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: autossh
+Version: 1.4b-20140307.1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/config/autossh 323e45f17a7add0e3e743453d0811f17
+Installed-Time: 1397567690
+
+Package: mentohust
+Version: 0.3.1-20130930.2
+Depends: libc, libpcap
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: hwf-crypto
+Version: 0.0.1-20140321
+Depends: libc, libopenssl, libtw
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: dnsmasq
+Version: 2.62-20140411
+Depends: libc, libtw
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/config/dhcp eacdef83b71352fa955ff129f7dccf1e
+ /etc/dnsmasq.conf 92dab407eeb4dfe4f4806045da4a7568
+Installed-Time: 1397567691
+
+Package: resolveip
+Version: 1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+Auto-Installed: yes
+
+Package: hctools
+Version: 2.2-1.2
+Depends: libc, libbdinfo, libopenssl
+Provides:
+Status: install user installed
+Architecture: all
+Installed-Time: 1397567692
+
+Package: libblkid
+Version: 2.21.2-1
+Depends: libc, libuuid
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: ubusd
+Version: 2012-06-01-a62e2f8c15a65efb1a82404d8f31e3bfc1cbe7d9
+Depends: libc, libubox
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: libdbi
+Version: 0.8.3-3
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: kmod-dm
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: libwrap
+Version: 7.6-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+Auto-Installed: yes
+
+Package: syslog-ng3
+Version: 3.0.5-aqjh.20140402
+Depends: libc, libpcre, glib2, libeventlog, libwrap, libpthread, librt, zlib, libdbi, libtw, libauth
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: jansson
+Version: 2.2.1-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: kmod-ledtrig-gpio
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libgpg-error
+Version: 1.9-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: kmod-pptp
+Version: 3.3.8-1
+Depends: kmod-ppp, kmod-gre, kmod-pppox
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-kproxy
+Version: 3.3.8+1.0.0-20131216
+Depends: kmod-hwf-core
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: kmod-ipt-nathelper-rtsp
+Version: 3.3.8+1.45-1
+Depends: kmod-ipt-core, kmod-ipt-conntrack-extra
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: luasocket
+Version: 2.0.2-3-hiwifi20131206
+Depends: libc, lua
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: kmod-fs-vfat
+Version: 3.3.8-1
+Depends: kmod-nls-base
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-usb2
+Version: 3.3.8-1
+Depends: kmod-usb-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: miniupnpd
+Version: 1.8.20130426-20131219.1
+Depends: libc, iptables, libip4tc, libip6tc, libnfnetlink
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: firewall
+Version: 2-61
+Depends: libc, iptables, kmod-ipt-conntrack, kmod-ipt-nat
+Provides:
+Status: install user installed
+Architecture: all
+Conffiles:
+ /etc/config/firewall d4c026eb8f149d853806e5da6a1125f6
+Installed-Time: 1397567692
+
+Package: wisp_chk
+Version: 1-2
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: kmod-ipt-conntrack-extra
+Version: 3.3.8-1
+Depends: kmod-ipt-core, kmod-ipt-conntrack
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: ss
+Version: 3.3.0-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1431950771
+
+Package: twx-3g
+Version: 2130-20140415
+Depends: libc, twx
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: libevent2
+Version: 2.0.21-2
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: dosfsck
+Version: 3.0.12-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+
+Package: kmod-mmc
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: tc
+Version: 3.3.0-1
+Depends: libc, kmod-sched-core
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: libuci
+Version: 2012-03-28.1-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: liblua
+Version: 5.1.5-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: libip4tc
+Version: 1.4.10-4
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: tcpdump
+Version: 4.2.1-2
+Depends: libc, libpcap
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1432022579
+
+Package: kmod-ip6tables
+Version: 3.3.8-1
+Depends: kmod-ipv6
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: libdaemon
+Version: 0.14-2
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: iptables-mod-ipopt
+Version: 1.4.10-4
+Depends: libc, iptables, kmod-ipt-ipopt
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: libavahi
+Version: 0.6.31-5
+Depends: libc, libdaemon, libpthread, libgdbm
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+
+Package: uci
+Version: 2012-03-28.1-1
+Depends: libc, libuci
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: lua
+Version: 5.1.5-1
+Depends: libc, liblua
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: kmod-fs-ext4
+Version: 3.3.8-1
+Depends: kmod-lib-crc16
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libiptc
+Version: 1.4.10-4
+Depends: libc, libip4tc, libip6tc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: libfuse
+Version: 2.9.0-2
+Depends: libc, kmod-fuse, libpthread
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: ppp-mod-pppol2tp
+Version: 2.4.5-6
+Depends: libc, kmod-pppol2tp
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: dropbear
+Version: 2011.54-2
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/dropbear/dropbear_rsa_host_key d41d8cd98f00b204e9800998ecf8427e
+ /etc/dropbear/dropbear_dss_host_key d41d8cd98f00b204e9800998ecf8427e
+ /etc/config/dropbear 4ff9c827d4f95ca5082a5520c03e1419
+Installed-Time: 1397567691
+
+Package: spawn-fcgi
+Version: 1.6.3-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: flock
+Version: 2.21.2-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: kmod-ledtrig-timer
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: logrotate
+Version: 3.8.1-1
+Depends: libc, libpopt
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/logrotate.conf 96693c1724c8dd1284910d8d9d1a8851
+Installed-Time: 1397567693
+
+Package: curl
+Version: 7.34.0-3
+Depends: libc, libcurl
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+
+Package: kmod-nls-utf8
+Version: 3.3.8-1
+Depends: kmod-nls-base
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: xl2tpd
+Version: 1.3.1-20130826
+Depends: libc, ppp-mod-pppol2tp, ip, resolveip
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/xl2tpd/xl2tpd.conf 2b7437f34b14c70b6b29383d0a6197ed
+ /etc/xl2tpd/xl2tp-secrets dc2b1ed627a89d3debb3c731da45d47b
+ /etc/ppp/options.xl2tpd bbfab931864b3db617c38e96071cf4b6
+Installed-Time: 1397567695
+
+Package: kmod-crypto-aes
+Version: 3.3.8-1
+Depends: kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-nls-cp437
+Version: 3.3.8-1
+Depends: kmod-nls-base
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libstdcpp
+Version: 4.6-linaro-1
+Provides:
+Status: install hold installed
+Essential: yes
+Architecture: ralink
+Installed-Time: 1397567694
+Auto-Installed: yes
+
+Package: mtd
+Version: 20140403
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libltdl
+Version: 2.4-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: kmod-crypto-cbc
+Version: 3.3.8-1
+Depends: kmod-crypto-manager, kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-crypto-core
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: kmod-exfat
+Version: 3.3.8-5
+Depends: kmod-nls-utf8
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+
+Package: kmod-sched
+Version: 3.3.8-1
+Depends: kmod-sched-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libgcc
+Version: 4.6-linaro-1
+Provides:
+Status: install hold installed
+Essential: yes
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: hwf-health-chk
+Version: 0.0.1-20140409
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: libtw-lua
+Version: 0.0.62-20140329
+Depends: libc, libtw, liblua
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: x3c8021x
+Version: 1.3-1.4
+Depends: libc, libpcap
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: libreadline
+Version: 5.2-2
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: libip6tc
+Version: 1.4.10-4
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: inet_chk
+Version: 1-20140415-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: all
+Installed-Time: 1397567692
+
+Package: libuuid
+Version: 2.21.2-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: kmod-crypto-wq
+Version: 3.3.8-1
+Depends: kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: ppp
+Version: 2.4.5-6
+Depends: libc, kmod-ppp
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/ppp/chap-secrets e29cbe6021f13bd9b14d780a80f188ab
+ /etc/ppp/filter 16b01d9201be60c9d1f16dd98f449484
+ /etc/ppp/options 45aba422b6dcd589ff191c6195ad4060
+Installed-Time: 1397567694
+
+Package: libubox
+Version: 2012-07-08-cca2ed6c8cdb3555fea43ff63ba1c9905dd7a164
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: kmod-leds-gpio
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-gpio-button-hotplug
+Version: 3.3.8-1
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: libspictl
+Version: 1-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: all
+Installed-Time: 1397567694
+
+Package: ppp-mod-pptp
+Version: 2.4.5-6
+Depends: libc, kmod-pptp, kmod-mppe, resolveip
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: libjson
+Version: 0.9-2
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: kmod-hwf-core
+Version: 3.3.8+1.0.0-20131204
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: wpad-hiwifi
+Version: 1.0-20140701
+Depends: libc, libuci, libcurl, hwf-cert
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1431946349
+
+Package: librt
+Version: 0.9.33.2-1
+Depends: libpthread
+Provides:
+Status: install hold installed
+Essential: yes
+Architecture: ralink
+Installed-Time: 1397567694
+Auto-Installed: yes
+
+Package: cryptsetup
+Version: 1.4.1-1
+Depends: libc, libblkid, libuuid, libpopt, lvm2, libgcrypt, libdevmapper
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+
+Package: kmod-salist
+Version: 3.3.8-20140303
+Depends: kmod-ipt-core
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+Auto-Installed: yes
+
+Package: special-dial
+Version: 1.1-1
+Depends: libc, librt
+Provides:
+Status: install user installed
+Architecture: all
+Installed-Time: 1397567694
+
+Package: swap-utils
+Version: 2.21.2-1
+Depends: libc, libblkid
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: librpc
+Version: 0.9.32-rc2-0a2179bbc0844928f2a0ec01dba93d9b5d6d41a7
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: util-switch
+Version: 1.1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: kmod-nf_tayga
+Version: 3.3.8-20140304
+Depends: kmod-ipv6
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libblobmsg-json
+Version: 2012-07-08-cca2ed6c8cdb3555fea43ff63ba1c9905dd7a164
+Depends: libc, libjson, libubox
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: libbdinfo
+Version: 1-1
+Depends: libc, libopenssl
+Provides:
+Status: install user installed
+Architecture: all
+Installed-Time: 1397567691
+
+Package: kmod-crypto-ecb
+Version: 3.3.8-1
+Depends: kmod-crypto-manager, kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: iptables
+Version: 1.4.10-4
+Depends: libc, kmod-ipt-core, libip4tc, libxtables
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: iptables-mod-filter
+Version: 1.4.10-4
+Depends: libc, iptables, kmod-ipt-filter
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: hotplug2
+Version: 1.0-beta-4
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/hotplug2.rules b289acb7fafcdd2f64cea3a711ac80a0
+Installed-Time: 1397567692
+
+Package: kmod-ipt-nathelper
+Version: 3.3.8-1
+Depends: kmod-ipt-core, kmod-ipt-nat
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libtw
+Version: 0.0.62-20140329
+Depends: libc, libuci, libbdinfo
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: ntfs-3g
+Version: 2013.1.13-1-fuseext
+Depends: libc, kmod-fuse, libfuse, libpthread
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: kmod-sit
+Version: 3.3.8-1
+Depends: kmod-ipv6, kmod-iptunnel4
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-fuse
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: libelf
+Version: 0.8.13-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: kmod-smartqos
+Version: 3.3.8+1.0.0-20140403
+Depends: kmod-hwf-core
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: jshn
+Version: 2012-07-08-cca2ed6c8cdb3555fea43ff63ba1c9905dd7a164
+Depends: libc, libjson
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: libncurses
+Version: 5.7-5
+Depends: libc, terminfo
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: e2fsprogs
+Version: 1.42.4-1
+Depends: libc, libblkid, libuuid, libext2fs
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+
+Package: kmod-ipt-core
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: libpcap
+Version: 1.1.1-20130407.1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: kmod-ipv6
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: libhiwifi-lua
+Version: 0.66-20140307
+Depends: libc, nixio, luasec, libtw-lua, liblua
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: kmod-ppp
+Version: 3.3.8-1
+Depends: kmod-lib-crc-ccitt
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libnfnetlink
+Version: 1.0.0-2
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: kmod-loop
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: libubus
+Version: 2012-06-01-a62e2f8c15a65efb1a82404d8f31e3bfc1cbe7d9
+Depends: libc, libubox
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: kmod-iptunnel4
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libeventlog
+Version: 0.2.9-2
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+
+Package: luasec
+Version: 0.4-4f37552d6f0b9f416059a8245fcf237d1c585733-iridium77.20130419.1
+Depends: libc, lua, libopenssl, luasocket
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: iptables-mod-conntrack-extra
+Version: 1.4.10-4
+Depends: libc, iptables, kmod-ipt-conntrack-extra
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: htpdate
+Version: 1.0.5-20140120-b707e2f104cf9dbd9d8392285e125db67f17f4f0-1
+Depends: libc, libbdinfo
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: ip6tables
+Version: 1.4.10-4
+Depends: libc, kmod-ip6tables, libip6tc, libxtables
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: libxtables
+Version: 1.4.10-4
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: zlib
+Version: 1.2.7-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: ated
+Version: 1.0-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+
+Package: network-fix
+Version: 1.1.0-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-nls-cp850
+Version: 3.3.8-1
+Depends: kmod-nls-base
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-mmc-mtk-mc-host
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-nls-iso8859-1
+Version: 3.3.8-1
+Depends: kmod-nls-base
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-ipt-ipopt
+Version: 3.3.8-1
+Depends: kmod-ipt-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: fsckexfat
+Version: 1.0.1-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: autowantype
+Version: 1-20140306
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+
+Package: kmod-ipt-nathelper-extra
+Version: 3.3.8-1
+Depends: kmod-ipt-core, kmod-ipt-nat, kmod-lib-textsearch
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: pptpd
+Version: 1.3.4-2
+Depends: libc, kmod-ppp, kmod-gre, ppp
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/pptpd.conf cdb8b23d8921a60dffd941b5686a1dc5
+ /etc/ppp/options.pptpd e6fc26d6178a66c3ed74c810e3325433
+Installed-Time: 1397567694
+
+Package: kmod-crypto-rng
+Version: 3.3.8-1
+Depends: kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: radvd
+Version: 1.9.1-20130903.1
+Depends: libc, kmod-ipv6, libdaemon
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/config/radvd 60c3ad8ad87d5dd14799fe7a5db73f72
+Installed-Time: 1397567693
+Auto-Installed: yes
+
+Package: libsqlite3
+Version: 3071201-1
+Depends: libc, libpthread
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567693
+Auto-Installed: yes
+
+Package: libext2fs
+Version: 1.42.4-1
+Depends: libc, libcom_err
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: kmod-napt66
+Version: 3.3.8+0.2-20130903.1
+Depends: ip6tables, radvd
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libexpat
+Version: 2.0.1-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: kernel
+Version: 3.3.8-1-0d5dab957fd253377af743e4b53d20b6
+Depends: libc
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: libnl-tiny
+Version: 0.1-3
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: blkid
+Version: 2.21.2-1
+Depends: libc, libblkid
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: openssh-client
+Version: 6.1p1-20130609.1
+Depends: libc, libopenssl, zlib
+Provides:
+Status: install user installed
+Architecture: ralink
+Conffiles:
+ /etc/ssh/ssh_config 87d80a85396a91dec731062a08727f62
+Installed-Time: 1397567694
+
+Package: lsqlite3
+Version: 7-2
+Depends: libc, lua, libsqlite3
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libdevmapper
+Version: 2.02.96-1
+Depends: libc, kmod-dm
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: kmod-ifb
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-mppe
+Version: 3.3.8-1
+Depends: kmod-ppp, kmod-crypto-core, kmod-crypto-arc4, kmod-crypto-sha1, kmod-crypto-ecb
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-nls-base
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: libgdbm
+Version: 1.9.1-2
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: vpn
+Version: 1-20130921
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: all
+Installed-Time: 1397567695
+
+Package: libpopt
+Version: 1.7-5
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: devctl
+Version: 1.0.2-5
+Depends: libc, libbdinfo
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+
+Package: nixio
+Version: 0.10.0
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567691
+Auto-Installed: yes
+
+Package: wireless-tools
+Version: 29-11
+Depends: libc, liblua
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567695
+
+Package: kmod-crypto-arc4
+Version: 3.3.8-1
+Depends: kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: kmod-crypto-sha1
+Version: 3.3.8-1
+Depends: kmod-crypto-hash, kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: fcgi-cgi
+Version: 0.1.8-20130910.1
+Depends: libc, libev, spawn-fcgi, glib2
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: kmod-pppol2tp
+Version: 3.3.8-1
+Depends: kmod-ppp, kmod-pppox, kmod-l2tp
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+
+Package: libopenssl
+Version: 1.0.1c-2
+Depends: libc, zlib
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567690
+Auto-Installed: yes
+
+Package: kmod-scsi-core
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+
+Package: pppoe-sniffer-server
+Version: 3.10-4
+Depends: libc, ppp
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: nginx
+Version: 1.4.1-aqjh.cloud.20140213
+Depends: libc, libpcre, lua, zlib, libpthread, liblua, libopenssl
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: ppp-mod-pppoe
+Version: 2.4.5-6
+Depends: libc, kmod-pppoe
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1397567694
+
+Package: kmod-ipt-nat
+Version: 3.3.8-1
+Depends: kmod-ipt-core, kmod-ipt-conntrack
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: kmod-sched-core
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567692
+Auto-Installed: yes
+
+Package: kmod-ledtrig-netdev
+Version: 3.3.8-1
+Provides:
+Status: install hold installed
+Architecture: ralink
+Installed-Time: 1397567693
+

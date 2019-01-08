@@ -1,0 +1,13 @@
+Package: libubus-lua
+Version: 2012-06-01-a62e2f8c15a65efb1a82404d8f31e3bfc1cbe7d9
+Depends: libc, libubus, liblua
+Provides: 
+Source: package/ubus
+Section: luci2
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: ralink
+Installed-Size: 3745
+Description:  Lua binding for the OpenWrt RPC client

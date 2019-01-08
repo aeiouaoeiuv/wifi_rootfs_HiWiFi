@@ -1,0 +1,16 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2006 OpenWrt.org
+
+START=98
+BIN=/usr/sbin/htpdate
+RUN_D=/var/run
+PID_F=$RUN_D/htpdate.pid
+
+start() {
+	mkdir -p $RUN_D
+	$BIN -4 -d -l -s -t -T 1390214218 -u nobody -D www.qq.com www.baidu.com www.youku.com www.taobao.com
+}
+
+stop() {
+	[ -f $PID_F ] && kill -9 $(cat $PID_F) && rm $PID_F
+}

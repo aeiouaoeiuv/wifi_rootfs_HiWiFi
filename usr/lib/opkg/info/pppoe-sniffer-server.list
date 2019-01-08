@@ -1,0 +1,4 @@
+/lib/upgrade/keep.d/pppoe-sniffer-server
+/usr/sbin/pppoe-sniffer-server
+/etc/ppp/plugins/rp-pppoe.so
+/sbin/pppoe-sniffer.sh

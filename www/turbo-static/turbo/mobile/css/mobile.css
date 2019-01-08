@@ -1,0 +1,15 @@
+.text-align-center {text-align: center;}
+.text-align-right {text-align: right;}
+.link_status .ui-btn-up-c{padding:0px;}
+.link_status .info{font-size:12px;font-weight:normal;}
+.link_status .error{color:red;}
+.link_status .title{padding-bottom: 5px;}
+.succssbox{color:#0bea00;}
+.noticebox {color:red;}
+#noti_box{padding-top:10px;}
+a {text-decoration: none;}
+a:hover {text-decoration:none;}
+/*.good{width:17px;height:17px;float:left;background: no-repeat left top url("/turbo-static/turbo/mobile/image/good_icon.png");}
+.bad{width:17px;height:17px;float:left;background: no-repeat left top url("/turbo-static/turbo/mobile/image/bad_icon.png");}
+.nomal{width:17px;height:17px;float:left;background: no-repeat left top url("/turbo-static/turbo/mobile/image/nomal_icon.png");}
+*/

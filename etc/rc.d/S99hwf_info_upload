@@ -1,0 +1,11 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+
+start() {
+	hwf_info_upload.sh &
+}
+
+stop() {
+	killall hwf_info_upload.sh &> /dev/null
+}

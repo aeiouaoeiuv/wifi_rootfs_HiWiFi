@@ -1,0 +1,45 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2009-2012 OpenWrt.org
+
+START=48
+STOP=20
+NGINX_BIN=/usr/sbin/nginx
+FIREWALL_RELOAD=0
+
+set_mac() {
+	[ -f "/lib/platform.sh" ] && {
+		. /lib/platform.sh
+		echo -e "\t\tset\t\$tw_server_addr\t\t'$(tw_get_mac)';" > /etc/nginx/tw.server_addr.conf
+	}
+}
+
+set_ip() {
+	echo -e "\t\tset\t\$tw_server_ip\t\t'$(/sbin/uci get network.lan.ipaddr)';" > /etc/nginx/tw.server_ip.conf
+}
+
+start() {
+	mkdir -p /var/log/nginx
+	mkdir -p /var/lib/nginx
+
+	set_mac
+	set_ip
+
+	$NGINX_BIN -t || {
+		return
+	}
+
+	$NGINX_BIN
+}
+
+stop() {
+	$NGINX_BIN -s stop
+}
+
+reload() {
+	$NGINX_BIN -s reload
+}
+
+shutdown() {
+	$NGINX_BIN -s quit
+}
+

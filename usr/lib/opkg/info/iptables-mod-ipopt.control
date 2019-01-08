@@ -1,0 +1,32 @@
+Package: iptables-mod-ipopt
+Version: 1.4.10-4
+Depends: libc, iptables, kmod-ipt-ipopt
+Provides: 
+Source: package/network/utils/iptables
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 20505
+Description:  iptables extensions for matching/changing IP packet options.
+ 
+ Matches:
+ - dscp
+ - ecn
+ - length
+ - mark
+ - statistic
+ - tcpmss
+ - time
+ - unclean
+ - hl
+ 
+ Targets:
+ - DSCP
+ - CLASSIFY
+ - ECN
+ - MARK
+ - HL
+ 

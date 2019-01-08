@@ -1,0 +1,13 @@
+Package: uci
+Version: 2012-03-28.1-1
+Depends: libc, libuci
+Provides: 
+Source: package/uci
+Section: base
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: ralink
+Installed-Size: 6729
+Description:  Utility for the Unified Configuration Interface (UCI)

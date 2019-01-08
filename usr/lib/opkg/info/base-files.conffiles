@@ -1,0 +1,8 @@
+/etc/group
+/etc/passwd
+/etc/shadow
+/etc/shells
+/etc/rc.local
+/etc/sysupgrade.conf
+/etc/config/bridge
+/etc/config/system

@@ -1,0 +1,27 @@
+		<br>
+		<hr>
+		<div>
+			<div  align="center" style="font-size:20px">移动版 | 
+			<a href="#" onclick="javascript:switch_interface_type('web','<%=luci.dispatcher.build_url("admin_web")%>');" data-transition="none">完整版</a> </div>
+		</div>
+		<div align="center" style="clear:both;padding-top:10px;font-size:9px;">
+			(更多高级功能 请切换至 "完整版")
+		</div>
+		<div align="center" style="clear:both;font-size:9px;">
+		<p><b>系统版本</b>  <% luci.http.write(luci.util.get_sys_board()) %> - <% luci.http.write(tw.get_version():match("^([^%s]+)")) %>. <b>IP</b> <% if tw.get_wan_ip()=="" or tw.get_wan_ip() == nil  then luci.http.write("无") else luci.http.write(tw.get_wan_ip()) end%> <b>MAC</b> <%luci.http.write(tw.get_mac())%></p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+window.onload = function() {
+	window.addEventListener('shake', shakeEventDidOccur, false);
+	//define a custom method to fire when shake occurs.
+	function shakeEventDidOccur () {
+		set_led_status();
+		return false;
+	}
+};
+</script>
+</body>
+</html>
+<!-- $Revision: 543 $ -->

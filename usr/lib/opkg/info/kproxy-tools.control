@@ -1,0 +1,13 @@
+Package: kproxy-tools
+Version: 1.0.0-20140211
+Depends: libc
+Provides: 
+Source: /home/release/branch/release0.9003/HC5761/package/kproxy-tools
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Chen Xu<chen.xu@hiwifi.tw>
+Architecture: all
+Installed-Size: 4772
+Description:  Used to configure the kmod hwf_kproxy.

@@ -1,0 +1,6 @@
+/etc/cert/client.openapi.hiwifi.com.crt
+/etc/cert/client.openapi.hiwifi.com.key
+/etc/wlan/server.crt.pem
+/etc/wlan/ca.crt.pem
+/etc/wlan/serverkey.pem
+/etc/wlan/dh.pem

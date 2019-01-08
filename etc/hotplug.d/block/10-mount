@@ -1,0 +1,151 @@
+#!/bin/sh
+# Copyright (C) 2012-2013 hiwifi.com
+# This is free software, licensed under the GNU General Public License v2.
+# See /LICENSE for more information.
+#
+
+blkdev=`dirname $DEVPATH`
+device=`basename $DEVPATH`
+
+STORAGE=/tmp/data
+SWAP=$STORAGE/.swap
+
+hotplug_cb() {
+	local action=$1
+
+	for rc_file in /etc/hotplug.d/block/restart.d/* ; do
+		$rc_file restart
+	done
+
+	for init_file in /etc/hotplug.d/block/action.d/* ; do
+		$init_file $action
+	done
+}
+
+creat_storage_swap() {
+	mount | grep "$1" | grep -qs "ro,"
+	if [ $? -eq 0 ]; then
+		/sbin/sdtest.sh
+		return
+	fi
+
+	case "$1" in
+	"mmcblk"*)
+		[ ! -L $STORAGE ] && cp -rf $STORAGE/* $2/
+		rm -rf $STORAGE
+		ln -ns $2 $STORAGE
+
+		[ ! -e $STORAGE/var/lib ] && mkdir -p $STORAGE/var/lib
+
+		mount | grep "$1" | grep -qs "fuseblk"
+		if [ $? -ne 0 ]; then
+			# create swap
+			[ ! -e "$SWAP" ] && dd if=/dev/zero of="$SWAP" bs=1M count=128 > /dev/null 2>&1
+			swapon $SWAP > /dev/null 2>&1
+			if [ $? -ne "0" ]; then
+				mkswap $SWAP > /dev/null
+				swapon $SWAP
+			fi
+		fi
+
+		/sbin/sdtest.sh
+
+		hotplug_cb start
+		;;
+	esac
+}
+
+stop_storage_swap() {
+	case "$1" in
+	"mmcblk"*)
+		hotplug_cb stop
+
+		rm -f /tmp/sdinfo.txt
+
+		mount | grep "$1" | grep -qs "fuseblk"
+		if [ $? -ne 0 ]; then
+			[ -e "$SWAP" ] && swapoff $SWAP
+		fi
+		
+		rm -rf $STORAGE
+		mkdir -p $STORAGE
+		;;
+	esac
+}
+
+case "$device" in
+"sd"* | "mmcblk"*)
+	case "$ACTION" in
+	add)
+		ID_FS_TYPE=""
+		ID_FS_UUID=""
+		dev_path="/dev/$device"
+
+		eval `blkid -o udev $dev_path`
+
+		# no filesystem type
+		[ -z $ID_FS_TYPE ] && exit 1
+
+		mkdir -p /tmp/$device
+
+		if [ "$ID_FS_TYPE" == "msdos" -o "$ID_FS_TYPE" == "vfat" ] ; then
+			dosfsck -a /dev/$device >/dev/null 2>&1
+			mount -t vfat -o noatime,fmask=0000,dmask=0000,iocharset=utf8 /dev/$device /tmp/$device
+			if [ $? -eq "0" ]; then
+				mount | grep "$device" | grep -qs "ro,"
+				if [ $? -eq "0" ]; then
+					mount -t vfat -o remount /dev/$device /tmp/$device
+				fi
+				creat_storage_swap $device /tmp/$device
+			fi
+		elif [ "$ID_FS_TYPE" == "ntfs" ] ; then
+			ntfs-3g -o big_writes,noatime,nls=utf8 /dev/$device /tmp/$device
+			if [ $? -eq "0" ]; then
+				mount | grep "$device" | grep -qs "ro,"
+				if [ $? -eq "0" ]; then
+					umount /tmp/$device
+					if [ $? -eq "0" ]; then
+						ntfs-3g -o big_writes,noatime,nls=utf8 /dev/$device /tmp/$device
+					fi
+				fi				
+				creat_storage_swap $device /tmp/$device
+			fi
+		elif [ "$ID_FS_TYPE" == "exfat" ] ; then
+			fsck.exfat /dev/$device >/dev/null 2>&1
+			mount -t exfat -o noatime,fmask=0,dmask=0,iocharset=utf8 /dev/$device /tmp/$device
+			if [ $? -eq "0" ]; then
+				mount | grep "$device" | grep -qs "ro,"
+				if [ $? -eq "0" ]; then
+					mount -t exfat -o remount /dev/$device /tmp/$device
+				fi				
+				creat_storage_swap $device /tmp/$device
+			fi			
+		elif [ "$ID_FS_TYPE" == "ext4" -o "$ID_FS_TYPE" == "ext3" -o "$ID_FS_TYPE" == "ext2" ] ; then
+			e2fsck -y /dev/$device
+			mount -o noatime /dev/$device /tmp/$device
+			if [ $? -eq "0" ]; then
+				mount | grep "$device" | grep -qs "ro,"
+				if [ $? -eq "0" ]; then
+					mount -o remount /dev/$device /tmp/$device
+				fi
+				creat_storage_swap $device /tmp/$device
+			fi
+		fi	
+		;;
+	remove)
+		dev_full=$(mount | grep "$device" | awk '{if(/\/tmp\//) print $1 }')
+		if [ "$dev_full" == "/dev/$device" ]; then
+			stop_storage_swap $device
+		fi
+		umount -l /tmp/$device
+		;;
+	offline)
+		[ -z $FS_DEV ] && exit 1
+		sleep 1
+		stop_storage_swap $FS_DEV
+		/sbin/sdtest.sh
+		;;
+	esac
+	;;
+esac
+

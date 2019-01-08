@@ -1,0 +1,86 @@
+update() {
+  sed -i '/wifi_sleep$/d' /etc/crontabs/root
+  sed -i '/^$/d' /etc/crontabs/root
+  echo "" >> /etc/crontabs/root
+  echo "$1 $2 * * * /etc/app/wifi_sleep.script down #wifi_sleep" >> /etc/crontabs/root
+  echo "$3 $4 * * * /etc/app/wifi_sleep.script up   #wifi_sleep" >> /etc/crontabs/root
+  set_notice $2 $1 $4 $3 600
+  echo "" >> /etc/crontabs/root
+  /etc/init.d/cron stop
+  /etc/init.d/cron start
+  return 0
+}
+
+ishour(){
+  hour=$1
+  if [ "$hour" -ge 0 -a "$hour" -le 23 ] 2>/dev/null; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+ismin() {
+  min=$1
+  if [ "$min" -ge 0 -a "$min" -le 59 ] 2>/dev/null; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+# Notice down before n sec
+# $1 down_hour
+# $2 down_min
+# $3 up_hour
+# $4 up_min
+# $5 before second
+set_notice() {
+  down_hour=$1
+  down_min=$2
+  up_hour=$3
+  up_min=$4
+  before_sec=$5
+  ishour $down_hour
+  if [ $(echo $?) != 0 ]; then
+    return 1
+  fi
+  ismin $down_min
+  if [ $(echo $?) != 0 ]; then
+    return 1
+  fi
+  date_str="2014.06.26-${down_hour}:${down_min}:0"
+  init_time=$(date +%s -d $date_str)
+  before=$((init_time-before_sec))
+  todo_min=$(date -d "@${before}" "+%M")
+  todo_hour=$(date -d "@${before}" "+%H")
+  echo "$todo_min $todo_hour * * * lua /etc/app/wifi_sleep_event.lua \"close\" \"$down_hour\" \"$down_min\" \"$up_hour\" \"$up_min\" #wifi_sleep" >> /etc/crontabs/root
+}
+
+off() {
+  sed -i '/wifi_sleep$/d' /etc/crontabs/root
+  /etc/init.d/cron stop
+  /etc/init.d/cron start
+  return 0
+}
+
+down(){
+  # disabled all ap
+  uci show wireless|grep '.mode=ap$'|awk -F '.mode=ap$' '{print $1}'|while read line; do
+    uci set $line".disabled=1"
+  done
+  uci commit
+  wifi
+}
+
+up(){
+  uci set wireless.@wifi-iface[0].disabled=0
+  uci show wireless|grep '.mode=ap$'|awk -F '.mode=ap$' '{print $1}'|while read line; do
+    if [ $(uci get $line".active") == "1" ]; then
+      uci set $line".disabled=0"
+    fi
+  done
+  uci commit
+  wifi
+}
+$1 $2 $3 $4 $5

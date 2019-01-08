@@ -1,0 +1,14 @@
+Package: hwf-crypto
+Version: 0.0.1-20140321
+Depends: libc, libopenssl, libtw
+Provides: 
+Source: /home/release/branch/release0.9003/HC5761/package/hwf-crypto
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 3051
+Description:  hwf-crypto is a rc4 crypto tool.
+ getrouterid_sohtv is a secrety.

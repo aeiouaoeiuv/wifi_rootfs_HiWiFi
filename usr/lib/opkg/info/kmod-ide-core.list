@@ -1,0 +1,6 @@
+/etc/modules.d/20-ide-core
+/etc/modules-boot.d/40-ide-core
+/etc/modules.d/40-ide-core
+/lib/modules/3.3.8/ide-gd_mod.ko
+/lib/modules/3.3.8/ide-core.ko
+/etc/modules-boot.d/20-ide-core

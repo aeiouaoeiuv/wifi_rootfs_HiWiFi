@@ -1,0 +1,130 @@
+#!/bin/sh
+
+OPENAPI_LIB_DIR="/usr/lib/lua/openapi"
+OPENAPI_CONF_DIR="/etc/openapi.d"
+OPENAPI_CGI_ROOT="/usr/lib/openapi"
+API_APPS_DIR="/usr/lib/lua/openapi/apps/"
+
+app_id=13
+
+install() {
+    opkg update || exit 1
+    opkg upgrade wpad-hiwifi || exit 1
+    install_openapi
+    cp -r data/* /
+    update_mq
+    rm -rf /etc/cron/3/get_cloudkey
+    install_check_wifi_state
+    return 0
+}
+
+install_check_wifi_state() {
+    chmod +x /etc/init.d/check_wifi_state
+    /etc/init.d/check_wifi_state enable
+}
+
+uninstall_check_wifi_state() {
+    /etc/init.d/check_wifi_state disable
+    rm -f /etc/init.d/check_wifi_state
+}
+
+update_mq() {
+    echo "Update mq"
+    # Delete old crontabs
+    sed -i '/#hiwfimq$/d' '/etc/crontabs/root'
+
+    # +x
+    chmod +x /etc/app/wifi_channel_check.script
+    chmod +x /etc/app/part_speedup.script
+    chmod +x /etc/app/wifi_sleep.script
+    chmod +x /etc/app/daily_report_check.script
+    chmod +x /etc/cron/1/mq_process_job.script
+
+    /etc/app/wifi_channel_check.script start
+    /etc/app/daily_report_check.script start
+
+    # hack 9004 and 9003
+    source /etc/openwrt_release
+    ROM_VERSION=$(echo $DISTRIB_REVISION | awk -F '.' '{print $2}')
+    if [ $ROM_VERSION == '9004' -o $ROM_VERSION == '9003' ]; then
+        chmod +x /etc/app/device_guest_check.script
+        /etc/app/device_guest_check.script start
+        rm /etc/hotplug.d/wifi/device_online
+    else
+        rm /etc/app/device_guest_check.lua
+        rm /etc/app/device_guest_check.script
+    fi
+    
+    lua -e 'local mq = require "hiwifi.mq"; mq.init_mq();'
+}
+
+revert_mq() {
+    /etc/app/wifi_channel_check.script stop
+    /etc/app/daily_report_check.script stop
+    /etc/app/device_guest_check.script stop
+
+    rm /etc/app/wifi_sleep_event.lua
+    rm /etc/app/wifi_sleep.script
+    rm /etc/app/part_speedup.script
+    rm /etc/app/wifi_channel_check.script
+    rm /usr/lib/lua/hiwifi/mobileapp/part_speedup.lua
+    rm /etc/app/device_speedup_timeout.lua
+    rm /etc/hotplug.d/wifi/device_online
+    rm /etc/app/wifi_event.lua
+    rm /etc/app/wifi_channel_check.lua
+    rm /etc/app/daily_report.lua
+    rm /etc/app/daily_report_check.script
+    rm /etc/app/device_guest_check.lua
+    rm /etc/app/device_guest_check.script
+    rm /etc/cron/1/mq_process_job.script
+
+    cp /rom/usr/lib/lua/hiwifi/mq.lua /usr/lib/lua/hiwifi/mq.lua
+    cp /rom/etc/app/wifi_event.lua /etc/app/wifi_event.lua
+    cp /rom/etc/hotplug.d/wifi/device_online /etc/hotplug.d/wifi/device_online
+    cp /rom/etc/app/device_speedup_timeout.lua /etc/app/device_speedup_timeout.lua
+    cp /rom/usr/lib/lua/hiwifi/mobileapp/part_speedup.lua /usr/lib/lua/hiwifi/mobileapp/part_speedup.lua
+    cp /rom/etc/app/wifi_channel_check.lua /etc/app/wifi_channel_check.lua
+    cp /rom/etc/app/wifi_sleep_event.lua /etc/app/wifi_sleep_event.lua
+    cp /rom/etc/app/wifi_sleep.script /etc/app/wifi_sleep.script
+    cp /rom/etc/app/part_speedup.script /etc/app/part_speedup.script
+    cp /rom/etc/app/wifi_channel_check.script /etc/app/wifi_channel_check.script
+    cp /rom/etc/app/daily_report.lua /etc/app/daily_report.lua
+    cp /rom/etc/app/daily_report_check.script /etc/app/daily_report_check.script
+    
+    cp /rom/usr/lib/lua/hiwifi/mac_filter.lua /usr/lib/lua/hiwifi/mac_filter.lua
+    cp /rom/usr/lib/lua/hiwifi/device_guest.lua /usr/lib/lua/hiwifi/device_guest.lua
+    cp /rom/etc/cron/1/mq_process_job.script /etc/cron/1/mq_process_job.script
+    
+    # Delete old crontabs
+    sed -i '/#hiwfimq$/d' '/etc/crontabs/root'
+}
+
+uninstall() {
+    rm ${API_APPS_DIR}"mobile.lua"
+    uninstall_openapi
+    revert_mq
+    uninstall_check_wifi_state
+    return 0
+}
+
+install_openapi() {
+	echo "install_openapi"
+	local board=$(cat /proc/cmdline | awk '{print $1}' | awk -F= '{print $2}')
+	if [ "$board" == "HC6361" ] ; then 
+		opkg install hwf-openapi_ar71xx.ipk || exit 1
+	else
+		opkg install hwf-openapi_ralink.ipk || exit 1
+	fi
+	/etc/init.d/openapi enable
+	/etc/init.d/openapi start
+
+	/etc/init.d/nginx restart
+
+	mkdir -p  $OPENAPI_CONF_DIR/$app_id/cloud
+	cp openapi.permissions $OPENAPI_CONF_DIR/$app_id/cloud/permissions
+}
+
+uninstall_openapi() {
+	echo "uninstall_openapi"
+	rm -rf $OPENAPI_CONF_DIR/$app_id
+}

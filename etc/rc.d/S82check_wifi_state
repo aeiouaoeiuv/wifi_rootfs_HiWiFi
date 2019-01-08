@@ -1,0 +1,40 @@
+#!/bin/sh /etc/rc.common
+
+START=82
+STOP=99
+
+WIFI_SLEEP=/etc/app/wifi_sleep.status
+
+start() {
+   need_start_wifi=false
+   [ -f $WIFI_SLEEP ] && {
+     data=$(cat $WIFI_SLEEP)
+     close_time=$(echo $data | awk -F ',' '{print $1}')
+     open_time=$(echo $data | awk -F ',' '{print $2}')
+     [ ${#close_time} -eq 3 ] && {
+        close_time="0"$close_time
+     }
+     [ ${#open_time} -eq 3 ] && {
+        open_time="0"$open_time
+     }
+     [ ${#close_time} -eq 4 -a ${#open_time} -eq 4 ] && {
+        now_time=$(date "+%H%M")
+        [ $close_time -gt $open_time ] && {
+            open_time=`expr $open_time + 2400`
+            now_time=`expr $now_time + 2400`
+        }
+        [ $now_time -lt $close_time -o $now_time -ge $open_time ] && {
+            need_start_wifi=true
+        }
+     }
+   }
+   if [ $need_start_wifi == true ]; then
+      echo "call /etc/app/wifi_sleep.script up"
+      echo "start wifi for wifi sleep" >>/tmp/wcy.log
+      /etc/app/wifi_sleep.script up
+   fi
+}
+
+stop() {
+  return 0
+}

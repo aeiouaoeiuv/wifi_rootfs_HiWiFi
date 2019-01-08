@@ -1,0 +1,97 @@
+@version: 3.0
+
+
+######
+# options
+options {
+	chain_hostnames(no);
+	long_hostnames(no);
+	keep_hostname(yes);
+	use_dns(no);
+	use_fqdn(no);
+	check_hostname(no);
+	dns_cache(no);
+	log_iw_size(2000);
+	log_fetch_limit(20);
+	log_fifo_size(10000);
+	log_msg_size(8192);
+	flush_lines(0);
+	time_reopen(10);
+
+};
+
+
+######
+# internal
+source s_internal {
+	internal();
+};
+
+destination d_internal {
+	file("/dev/null");
+};
+
+log {
+	source(s_internal);
+	destination(d_internal);
+};
+
+
+######
+# center
+source s_nginx {
+	tcp(ip(127.0.0.1) port(515) max-connections(100) host_override("TurboWireless"));
+	udp(ip(127.0.0.1) port(515) so_rcvbuf(1048576) host_override("TurboWireless"));
+};
+
+source s_cmagent {
+	file("/tmp/data/cmagent"
+		program_override("tw-cmagent")
+		host_override("TurboWireless")
+		flags(no-parse)
+	);
+};
+
+source  s_hwf_inet_chk_state_log {
+    file("/tmp/data/hwf_inetchk_state_log" 
+		program_override("tw-hwf_inetchk_state_log")  
+		host_override("TurboWireless") 
+		flags(no-parse) 
+	);
+};
+
+source s_maclist {
+	file("/tmp/data/maclist.txt"
+		program_override("tw-maclist")
+		host_override("TurboWireless")
+		flags(no-parse)
+	);
+};
+
+source s_p2pstatus {
+	file("/tmp/data/p2p/p2pstatus.txt"
+		program_override("tw-p2pstatus")
+		host_override("TurboWireless")
+		flags(no-parse)
+	);
+};
+
+destination d_center {
+	tcp("l.hiwifi.com" port(520)
+		template("$PROGRAM $MSG \"$WANIP\" \"$HOST\"\n")
+		template_escape(no)
+		so_keepalive(yes)
+	);
+};
+
+
+log {
+	source(s_nginx);
+	source(s_cmagent);
+	source(s_maclist);
+	source(s_p2pstatus);
+	source(s_hwf_inet_chk_state_log);
+	destination(d_center);
+};
+
+

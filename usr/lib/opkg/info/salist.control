@@ -1,0 +1,13 @@
+Package: salist
+Version: 20140303
+Depends: libc, kmod-salist
+Provides: 
+Source: /home/release/branch/release0.9003/HC5661/package/xt_salist
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 30585
+Description:  Simple address list iptables extension

@@ -1,0 +1,13 @@
+Package: libtw-lua
+Version: 0.0.62-20140329
+Depends: libc, libtw, liblua
+Provides: 
+Source: /home/release/branch/release0.9003/HC5761/package/libtw
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Hong Shen <sh@ikwcn.com>
+Architecture: ralink
+Installed-Size: 4160
+Description:  libtw description

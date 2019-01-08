@@ -1,0 +1,13 @@
+Package: openssh-client
+Version: 6.1p1-20130609.1
+Depends: libc, libopenssl, zlib
+Provides: 
+Source: feeds/packages/net/openssh
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Peter Wagner <tripolar@gmx.at>
+Architecture: ralink
+Installed-Size: 163524
+Description:  OpenSSH client.

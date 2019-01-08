@@ -1,0 +1,27 @@
+crontab_file=/etc/crontabs/root
+key='part_speedup'
+
+set_notice() {
+  notice_min=$1
+  notice_hour=$2
+  notice_day=$3
+  notice_month=$4
+  mac=$5
+  time_alert=$6
+  sed -i '/^$/d' $crontab_file
+  echo "" >> $crontab_file
+  echo "$notice_min $notice_hour $notice_day $notice_month * lua /etc/app/device_speedup_timeout.lua \"$mac\" \"$time_alert\"; /etc/app/part_speedup.script remove #part_speedup" >> $crontab_file
+  echo "" >> $crontab_file
+  /etc/init.d/cron stop
+  /etc/init.d/cron start
+  return 0
+}
+
+remove() {
+  sed -i '/#part_speedup$/d' $crontab_file
+  /etc/init.d/cron stop
+  /etc/init.d/cron start
+  return 0
+}
+
+$1 $2 $3 $4 $5 $6 $7

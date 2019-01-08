@@ -1,0 +1,13 @@
+Package: hwf-health-chk
+Version: 0.0.1-20140409
+Depends: libc
+Provides: 
+Source: /home/release/branch/release0.9003/HC5661/package/hwf-health-chk
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 3472
+Description:  hwf-health-chk is a system state checking, accounting and fixing tool for hiwifi router.

@@ -1,0 +1,293 @@
+/*
+ * 极路由 首次安装
+ * v2.0
+ */
+ 
+html,body,h1,h2,h3,h4,p,ul,li,input,textarea,button{ margin: 0; padding: 0;}
+body{ text-align: center; font-family: "Hiragino Sans GB"; font-size: 1em; color: #000; line-height: 1.5;}
+div{ display: block;}
+h1,h2,h3,h4{ font-weight: 300;}
+h1{ font-size: 1.2em;}
+h2{ font-size: 1em;}
+h3{ font-size: .8em;}
+ul,li{ list-style: none;}
+input,textarea{ width: 100%; padding: .5em 0; border: none; background: none; font-size: 16px;}
+button{ width: 100%; border: none; font-weight: 700;}
+label{ clear: both; display: block; text-align: left;}
+cite{ font-style: normal;}
+em{ font-style: normal;}
+a{ color: #00B3FD; text-decoration: none;}
+a:hover{ text-decoration: underline;}
+
+a:focus,input:focus{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
+a:focus,input:focus{ -webkit-user-modify:read-write-plaintext-only; }
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #b3b3b3;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #b3b3b3;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #b3b3b3;
+}
+
+/**** 页面元素 ****/
+
+input.input-error {border-color: #f00;background: url(../images/x.png) no-repeat right center;}
+input.input-success {border:1px solid #000000}
+.errorBox { font-size: 14px; color: #f00;text-align: left;}
+
+.fl{ float: left;}
+.fr{ float: right;}
+
+/**** 布局 ****/
+#page{padding-bottom:20px;}
+
+/* 头部 */
+#header{ height: 40px; line-height: 40px; background: #E1E1E4; text-align: left;}
+#header h1{max-width: 640px; margin: 0 auto; }
+#header h1 #logo{/* position: absolute; margin-top: 3px; margin-left: 1em; */width: 153px; height: 33px; display: block;  background-image: url(../images/logo.png); background-repeat: no-repeat; background-size: auto 33px; text-indent: -9999px; overflow: hidden;}
+
+/* 主体区 */
+#content{ max-width: 640px; margin: 0 auto; padding: 0 1em;}
+#content h2{ font-size: 27px;  margin: .5em 0;}
+#content p{ font-size: 16px; margin: .5em 0;}
+
+/* 底部 */
+#footer{}
+
+/* 圆角 */
+.radius{-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
+
+/* 链接 */
+.link{ display: block; text-decoration: none; margin: 1.5em 0; font-size: 16px;}
+.skip{ color: #b2b2b2;}
+
+/* 短连接 */
+.short{ margin-left: 1em; font-size: 16px; color: #00B3FD;}
+
+/* 分割线 */
+.line{ margin: .5em 0; height: 0; border-bottom: 1px solid #e4e4e4;}
+
+/* 按钮 */
+.icon{}
+.icon.success{ padding-left: 50px; background: url(../images/icon_success.png) no-repeat left center; background-size: auto 40px;}
+.icon.checking{ padding-left: 50px; background: url(../images/icon_checking.gif) no-repeat left center; background-size: auto 40px;}
+.btn{ display: block; height: 48px; line-height: 48px; background: #00B3FD; border: 1px solid #00B3FD; font-size: 1.3em; font-weight: 300; color: #fff; cursor: pointer;}
+.btn:hover{ text-decoration: none; 
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	}
+.disabled{ cursor: default; background: #d9d9d9; border-color: #d9d9d9; color: #b3b3b3;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	}
+.alert{ height: 36px; line-height: 36px; background: #FFD400; border-color: #FFD400; color: #000;  font-size: 14px;}	
+
+/* 输入框 */
+.txt{ display: block; width: 100%; margin: .5em 0; height: 25px; line-height: 25px; border: 1px solid #000;  text-indent: 1em; background: #f7f7f7; font-size: 16px; color: #000;}
+.txt:focus{ outline: none; border-width: 2px;}
+
+/* 复选框 */
+.checkbox{ width: 200px; height: 20px; line-height: 20px; margin: 0 auto; font-size: 16px;
+	margin-bottom: 12px;
+	position: relative;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	-webkit-backface-visibility: hidden; 
+	}
+.checkbox input{ width: 10px;
+	outline: none !important;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	zoom: 1; 
+	}
+.checkbox .icon{ display: block; float: left; width: 18px; height: 18px; border: 1px solid #00B2FF; cursor: pointer;}
+.checked .icon{ background-image: url(../images/checked.png); background-repeat: no-repeat; background-position: center center; background-size: 50% auto;}
+
+/* 报错 */
+.error{ text-align: left; color: red; font-size: 14px!important;}
+
+/* 下拉选单 */
+.drop{ width: 100%; border: 1px solid #000; margin: 1em 0;}
+.drop .dk_toggle{ height: 40px; line-height: 40px; padding: 0 20px 0 0; background: #fff; color: #000; background: url(../images/arrow_down.png) no-repeat right center; overflow: hidden;}
+.dk_toggle em{ position: absolute; top:0; right: 2.5em;}
+.dk_toggle em.lock{ right: 4em;}
+.drop .dk_toggle .select-icon{ display: none; }
+.dk_container {
+	cursor: pointer;
+	font-size: 14px;
+	margin-bottom: 10px;
+	}
+.dk_container {position: relative;vertical-align: middle;}
+.dk_toggle {background-color: #1abc9c;color: white;border-radius: 6px;overflow: hidden;padding: 11px 45px 11px 13px;text-decoration: none;white-space: nowrap;text-align: left; z-index: 1; position: relative;}
+.dk_toggle:hover,
+.dk_toggle:focus,
+.dk_focus .dk_toggle {background-color: none; outline: none;text-decoration: none;}
+.dk_focus {z-index: 100}
+.dk_open .dk_toggle {background-color: #e0e0e0;}
+.dk_open .dk_toggle .select-icon {background-color: #e0e0e0;border-left-color: transparent;}
+.dk_open .dk_options {display: block;}
+.dk_options {padding-top: 3px;position: absolute;left: 0;width: 100%;display: none; z-index: 999; top:-3px;}
+.dk_options li {clear: both;display: block;text-align: left;height: 40px;line-height: 40px; position: relative;}
+.dk_options li em{ position: absolute; top:0;}
+.dk_options a {display: block; text-decoration: none; overflow: hidden;}
+.dk_options li a:hover,.dk_options li a:active  { color: #000;}
+.dk_options_inner{background-color: #e0e0e0; background-image: url(../images/arrow_up.png); background-repeat: no-repeat; background-position: right top; border-radius: 5px;margin: 0;max-height: 275px;overflow: hidden;}
+.dk_options_inner li{}
+.dk_options_inner li a span{ display: block; margin: 0 40px 0 20px; border-bottom: 1px solid #b2b2b2;}
+.dk_options_inner li.dk_option_current{}
+.dk_options_inner li.dk_option_current a{ color: #000; font-weight: 700;}
+.dk_touch .dk_options {max-height: 250px;}
+.dk_toggle {display: block;position: relative;}
+.dk_label { padding-left: 20px;}
+.dk_open {position: relative;}
+.dk_open .dk_label {color: inherit;}
+.dk_touch .dk_options {overflow: hidden;}
+.dk_fouc select {display: none;}
+#dk_options_s2 .dk_options_inner { overflow: auto;}
+.text-wrap {width: 80%;overflow: hidden;display: block;font-style: normal;line-height: 40px;height: 40px;}
+
+/* WiFi信号 */
+.wifi{ display: block; width: 20px; height: 40px; background: url(../images/wifi_rssi4.png) no-repeat; background-size: 20px auto; text-indent: -9999px; overflow: hidden; right: 2.5em;}
+.wifi.rssi1{ background-image: url(../images/wifi_rssi1.png);}
+.wifi.rssi2{ background-image: url(../images/wifi_rssi2.png);}
+.wifi.rssi3{ background-image: url(../images/wifi_rssi3.png);}
+
+/* 密码锁 */
+.lock{ display: block; float: right; width: 20px; height: 40px; background: url(../images/lock.png) no-repeat; background-size: 20px auto; right: 4em;}
+
+/**** 详细页面 ****/
+
+/* 首页 */
+#home{ background: #00B2FF;}
+#home #header{ margin: 15px 0 30px; height: 198px; background: none;}
+#home #header h1 #logo{ display: block; width: 100%; margin: 0; height: 198px; background: url(../images/logo_large.png) no-repeat center top; background-size: auto 198px;}
+#home .btn{ background: #fff; color: #00B3FD; border-color: #fff; margin-bottom: 1em;}
+#home .checkbox{ color: #fff;}
+#home .checkbox .icon{ background-color: #fff;}
+#home .checkbox a{ color: #fff; text-decoration: underline;}
+#home .disabled{ opacity: 0.6; filter: alpha(opacity=60);}
+
+/* 用户协议 */
+.agreement{ height: 220px; margin: 0 0 1em; overflow: auto; text-align: left; text-indent: 2em;}
+.agreement p{ padding-bottom: 10px;}
+
+/* 插入网线页 */
+.insert{}
+.insert .map{ margin: 1em 0 0; height: 180px; background: url(../images/insert.gif) no-repeat center top; background-size: auto 180px;}
+.insert.yes .map{ height: 180px; background: url(../images/insert_yes.png) no-repeat center top; background-size: auto 180px;}
+
+/* 找回宽带账号 */
+.find{}
+.find .map{ margin: 1em 0; height: 200px; background: url(../images/find_map.png) no-repeat center top; background-size: auto 200px;}
+.find.yes .map{ margin-bottom: 0; background: url(../images/find_map_yes.png) no-repeat center top;}
+.find.found .map{ margin-bottom: 0; background: url(../images/insert_yes.png) no-repeat center top;}
+
+/* 上网成功页 */
+.success-tit {font-size: 32px;line-height: 32px;font-family: Microsoft Yahei;margin-top:0.5em;}
+.success-info {font-size: 14px;font-family: Microsoft Yahei;margin-top:5px;}
+.app{ margin: 1em 0; height: 132px; background: url(../images/success_bg.png) no-repeat center top;}
+.info-tip {background: #fff7d9;border:1px solid #da8b01;border-radius: 5px;font-family: Microsoft Yahei;font-size: 14px;line-height: 14px;color: #da8b01;padding:8px 0;margin: 0.5em 0;}
+.info-tip span {vertical-align: middle;}
+.appstore {background:url( ../images/appstore.png) no-repeat 0 0;width: 20px;height: 20px;line-height: 20px;display: inline-block;vertical-align: middle;margin: 0 5px;}
+/* 联系宽带客服 */
+.contact{}
+.calls{ clear: both;}
+.calls li{ display: block; clear: both; height: 40px; line-height: 40px; text-align: left; border-top: 1px solid #000; padding: 0 1em;}
+.calls li a{ float: right;}
+.calls .more{ display: block; text-align: left; border-top: 1px solid #000; padding: 1em 0;}
+.calls .more a{ background: url(../images/arrow_down_blue.png) no-repeat right center; background-size: auto 44px; margin: 0 0 1em 1em; padding-right: 25px; text-decoration: none;}
+
+
+/* ToolPage */
+#toolpage{ margin: 0; padding: 0; height: 100%; overflow: hidden; font-size: 12px; background: #fff; font-family: Microsoft Yahei;}
+#toolpage a{ color: #D4F1FF }
+#toolpage a:hover{ color: #fff;}
+#toolpage ul, #toolpage li{ margin: 0; padding: 0; list-style: none;}
+#toolbar{ width: 100%; height: 72px; line-height: 72px; padding-bottom: 9px; background-color: #0093D9; background-image: url(../images/toolbar.png); background-repeat: repeat-x; background-position: center top; text-align: center;}
+#toolbar h1{ margin: 0; padding: 0; width: 130px; height: 40px; padding: 12px 10px 0; float: left;}
+#toolbar h1 a#logo{ display: block; height: 52px; background-image: url(../images/toolbar_logo.png); _background-image: url(../images/toolbar_logo_ie6.png); background-repeat: no-repeat; background-position: 0 0; text-indent: -9999px; overflow: hidden;}
+#toolbar #plugins{ width: 600px; height: 32px; line-height: 32px; margin: 0 auto; text-align: center; padding-top: 20px;}
+#toolbar #plugins li{ display: inline;}
+#toolbar #plugins a{ display: block; float: left; padding-right: 10px; margin-right: 10px; height: 30px; line-height: 30px; color: #D4F1FF; background: url(../images/toolbar_pipe.png) no-repeat right top;} 
+#toolbar #plugins a:hover{ color: #fff;} 
+#toolbar #plugins a .icon{ display: block; float: left; margin-top: 7px; margin-right: 10px; width: 16px; height: 16px; line-height: 30px; background-image: url(../images/tool_icon.png); _background-image: url(../images/tool_icon_ie6.png); background-repeat: no-repeat; background-position: left center;} 
+#toolbar #plugins a:hover .icon{ background-position: -16px 0;} 
+#toolbar #close{ width: 30px; height: 30px; display: block; float: right; background-image: url(../images/toolbar_close.png); _background-image: url(../images/toolbar_close_ie6.png); background-position: 0 0; text-indent: -9999px; overflow: hidden; margin-top: 20px; margin-right: 10px;} 
+#toolbar #close:hover{ background-position: -30px 0;}
+#viewing{height: 90%;}
+#toolbar #plugins #more a{ background: none!important}  
+#toolbar #plugins #more a .icon{ width: 12px; height: 6px; background-image: url(../images/drop.gif); background-repeat: no-repeat; background-position: 0 0; position: relative; top: 5px; } 
+#toolbar #plugins #more a:hover .icon{ background-position: 0 0; position: relative; top: 5px; } 
+#morediv{ position: absolute; width: 105px; background: #0093D9; margin-left: -10px; margin-top: 21px;} 
+#morediv li{ margin: 0; padding: 0; list-style: none; height: 32px; line-height: 32px; border-top: 1px solid #D4F1FF;}  
+#morediv li a{ display: block;} 
+#morediv li a:hover{background: #008CD8;} 
+@media (max-width: 320px){
+#toolpage{ min-width: 320px;}
+#toolbar{ height: 228px; background-position: center bottom; position: fixed;}
+#toolbar #plugins{ position: absolute; margin-top: 60px; width: 100%; padding-top: 0;}
+#toolbar #plugins a{ float: none; clear: both; margin-right: 0; text-align: center; border-top: 1px solid #66BFE9; padding: 5px 10px; background-image: none;} 
+#morediv{ width: 100%; margin-left: 0; margin-top: 3px;} 
+#morediv li{ display: block;} 
+#morediv li a{ padding-left: 24px;} 
+#morediv{ display: none;}
+#toolbar{ height: 100px;}
+#toolbar #plugins li{ display: none;}
+#toolbar #plugins li a{ font-size: 14px;}
+#toolbar #plugins #app{ display: block;}
+}
+
+
+/**** for 2x ****/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+
+input.input-error {background: url(../images/x@2x.png) no-repeat right center; background-size: auto 20px;}
+.icon.success{ background: url(../images/icon_success@2x.png) no-repeat left center; background-size: auto 40px;}
+.icon.checking{ background: url(../images/icon_checking@2x.gif) no-repeat left center; background-size: auto 40px;}
+.checked .icon{ background-image: url(../images/checked@2x.png); background-size: 50% auto;}
+.wifi{ background: url(../images/wifi_rssi4@2x.png) no-repeat; background-size: 20px auto;}
+.wifi.rssi1{ background-image: url(../images/wifi_rssi1@2x.png);}
+.wifi.rssi2{ background-image: url(../images/wifi_rssi2@2x.png);}
+.wifi.rssi3{ background-image: url(../images/wifi_rssi3@2x.png);}
+.lock{ background: url(../images/lock@2x.png) no-repeat; background-size: 20px auto;}
+.drop .dk_toggle{ background: url(../images/arrow_down@2x.png) no-repeat right center; background-size: auto 40px;}
+#header h1 #logo{ background-image: url(../images/logo@2x.png); background-size: auto 33px; }
+.insert .map{ background: url(../images/insert@2x.gif) no-repeat center top; background-size: auto 180px;}
+.insert.yes .map{ background: url(../images/insert_yes@2x.png) no-repeat center top; background-size: auto 180px;}
+.find .map{ background: url(../images/find_map@2x.png) no-repeat center top; background-size: auto 200px;}
+.find.yes .map{ margin-bottom: 0; background: url(../images/find_map_yes@2x.png) no-repeat center top; background-size: auto 200px;}
+.find.found .map{ background: url(../images/insert_yes@2x.png) no-repeat center top; background-size: auto 200px;}
+.app{background: url(../images/success_bg@2x.png) no-repeat center top;background-size: 100%;}
+.appstore {background:url( ../images/appstore@2x.png) no-repeat 0 0; background-size: 100%;}
+.calls .more a{ background: url(../images/arrow_down_blue@2x.png) no-repeat right center; background-size: auto 44px;}
+#home #header h1 #logo{background: url(../images/logo_large@2x.png) no-repeat center top; background-size: auto 198px;}
+.dk_options_inner{background-image: url(../images/arrow_up@2x.png); background-size: auto 40px;}
+
+#toolpage #toolbar h1 a#logo{ background-image: url(../images/toolbar_logo@2x.png); background-size: 130px auto;}
+#toolbar #plugins a .icon{  background-image: url(../images/tool_icon@2x.png); background-size: 32px auto;} 
+#toolbar #plugins #more a .icon{ background-image: url(../images/drop@2x.gif); background-size: 12px 6px;} 
+#toolbar #close{ background-image: url(../images/toolbar_close@2x.png); background-size: 60px auto;}
+
+}
+
+/**** for pc ****/
+
+@media (min-width: 720px) {
+
+#home #header{ padding: 80px 0 100px;}
+#home .btn{ width: 50%; margin: 10px auto 30px;}
+.agreement{ height: 360px;}
+
+}
+

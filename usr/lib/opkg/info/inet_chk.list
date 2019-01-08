@@ -1,0 +1,3 @@
+/usr/bin/inet_chk.sh
+/usr/bin/inet_chk_switch
+/etc/init.d/inet_chk

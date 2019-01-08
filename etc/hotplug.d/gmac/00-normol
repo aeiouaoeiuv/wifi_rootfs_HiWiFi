@@ -1,0 +1,20 @@
+#!/bin/sh
+
+wan_ifname="eth2.2"
+
+gmac_hotplug_cb() {
+	for script_file in /etc/hotplug.d/gmac/$2/* ; do
+		$script_file $1 $3
+	done
+}
+
+if [ $PORTNUM -eq 0 ]; then
+	case "$ACTION" in
+		"linkup")
+			gmac_hotplug_cb start wan $wan_ifname
+			;;
+		"linkdown")
+			gmac_hotplug_cb stop wan $wan_ifname
+			;;
+	esac
+fi

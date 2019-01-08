@@ -1,0 +1,16 @@
+Package: autowantype
+Version: 1-20140306
+Depends: libc
+Provides: 
+Source: package/network/utils/autowantype
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 4491
+Description:  autowantype: 1  means PPPOE
+ autowantype: 2  means DHCP
+ autowantype: 3  means Manual
+ autowantype: 99 means Cable problem

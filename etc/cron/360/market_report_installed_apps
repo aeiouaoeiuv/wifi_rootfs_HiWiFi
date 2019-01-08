@@ -1,0 +1,14 @@
+#!/usr/bin/lua
+-- Copyright (c) 2012 Elite Co., Ltd.
+-- Author: Hong Shen <sh@ikwcn.com>
+
+local market = require "hiwifi.market"
+local nixio = require "nixio"
+
+local tried_count = 0
+
+while tried_count <= 60 and not market.report() do
+  tried_count = tried_count + 1
+  -- Try again after 30 seconds.
+  nixio.nanosleep(30)
+end

@@ -1,0 +1,13 @@
+Package: kmod-pptp
+Version: 3.3.8-1
+Depends: kmod-ppp, kmod-gre, kmod-pppox
+Provides: 
+Source: package/kernel/linux
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 5357
+Description:  PPtP support

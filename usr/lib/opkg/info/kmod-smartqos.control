@@ -1,0 +1,13 @@
+Package: kmod-smartqos
+Version: 3.3.8+1.0.0-20140403
+Depends: kmod-hwf-core
+Provides: 
+Source: /home/release/branch/release0.9003/HC5661/package/smartqos
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Chen Xu<chen.xu@hiwifi.tw>
+Architecture: ralink
+Installed-Size: 12616
+Description:  This package contains smart QoS modules.

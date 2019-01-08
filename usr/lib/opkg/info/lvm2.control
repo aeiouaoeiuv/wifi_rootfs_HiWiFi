@@ -1,0 +1,15 @@
+Package: lvm2
+Version: 2.02.96-1
+Depends: libc, libdevmapper, libreadline, libncurses
+Provides: 
+Source: feeds/packages/utils/lvm2
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 359599
+Description:  LVM2 refers to a new userspace toolset that provide logical volume management
+ facilities on linux. It is reasonably backwards-compatible with the original
+ LVM toolset.

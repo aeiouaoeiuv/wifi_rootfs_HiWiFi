@@ -1,0 +1,13 @@
+Package: kmod-exfat
+Version: 3.3.8-5
+Depends: kmod-nls-utf8
+Provides: 
+Source: package/kernel/exfat-nofuse
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 47304
+Description:  This package contains exfat filesystem drivers.

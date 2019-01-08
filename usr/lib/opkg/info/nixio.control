@@ -1,0 +1,13 @@
+Package: nixio
+Version: 0.10.0
+Depends: libc
+Provides: 
+Source: /home/release/branch/release0.9003/HC5761/package/nixio
+Section: nixio
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Jingyuan Wang <jingyuan.wang@ikw.com>
+Architecture: ralink
+Installed-Size: 29777
+Description:  nixio description

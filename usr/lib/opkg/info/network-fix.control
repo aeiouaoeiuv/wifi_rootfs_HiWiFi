@@ -1,0 +1,15 @@
+Package: network-fix
+Version: 1.1.0-1
+Depends: libc
+Provides: 
+Source: /home/release/branch/release0.9003/HC5761/package/network-fix
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Li Kai <9@kai.li>
+Architecture: ralink
+Installed-Size: 832
+Description:  Several automatic script for network configuration
+ 1. lan ip address auto-switch in case of wan/lan ip collision
+ 2. auto fix wan dhcp passthrough problem on a wan-lan-in-one box

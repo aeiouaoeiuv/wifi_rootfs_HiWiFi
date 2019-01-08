@@ -1,0 +1,35 @@
+
+config wifi-device 'radio0'
+	option type 'ralink'
+	option channel '4'
+	option txpwr 'max'
+
+config wifi-iface
+	option device 'radio0'
+	option ifname 'ra0'
+	option ifname2 'rai0'
+	option network 'lan'
+	option mode 'ap'
+	option ssid 'SmarTecs_H1S'
+	option encryption 'mixed-psk'
+	option key 'smartecs123654'
+
+config wifi-iface
+	option device 'radio0'
+	option ifname 'apcli0'
+	option network 'lan'
+	option mode 'sta'
+	option ssid 'HiWiFi_082540'
+	option encryption 'none'
+	option disabled '1'
+
+config wifi-iface
+	option device 'radio0'
+	option ifname 'ra1'
+	option ifname2 'rai1'
+	option network 'lan'
+	option mode 'ap'
+	option ssid 'HiWiFi_guest'
+	option encryption 'none'
+	option disabled '1'
+

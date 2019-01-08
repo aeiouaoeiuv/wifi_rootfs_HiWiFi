@@ -1,0 +1,124 @@
+/*----------------------------------------  header  */
+body,h1,h2,h3,p,ul,ol,li,input,textarea{ margin: 0; padding: 0;}
+body { background: #008EC7; font-family: Microsoft Yahei; color: #666; line-height: 150%;}
+a{ color: #00B9FC; text-decoration: none;}
+a:hover{ color: #999;}
+.form-horizontal{ font-size: 14px;}
+.control-group{ padding: 5px 0;}
+.control-label{ width: 100px; float: left;}
+.controls{ padding-left: 100px;}
+.controls .txt{ height: 20px; line-height: 20px; padding: 2px; border: 1px solid #ddd; border-width: 2px 1px 1px 2px; background: none; font-size: 16px; color: #333;}
+.controls .btn{ border: 1px solid #379EBD; height: 30px; line-height: 30px; padding: 0 20px; *padding: 0 10px; background: #37AACC; margin: 10px 5px 0 0; color: #fff;  font-size: 14px; cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.controls .btn:hover{ background: #1D96B8;}
+.controls .btn-grey{ background: #F2F2F2; border: 1px solid #ddd; color: #333;}
+.controls .btn-grey:hover{ background: #E6E6E6;}
+.control-group.error .help-inline{ margin-left: 5px; color: red;}
+
+
+/*----------------------------------------  header  */
+#header{width: 100%; position: fixed; top: 0; left: 0; z-index: 10; height: 40px; line-height: 40px; _height: 50px; _line-height: 50px; border-bottom: 3px solid #007DB7;  background-color: #D7F1FC; background-image: url(../../images/guide/logo.png); _background-image: url(../../images/guide/logo_ie6.png); background-size: 90px auto; background-repeat: no-repeat; background-position: 10px 5px; text-align: center; _overflow: hidden;}
+#header h1{ font-size: 20px; color: #00B9FC;}
+
+/*----------------------------------------  main  */
+#main{ width: 800px; margin: 0 auto; text-align: center;}
+
+/*----------------------------------------  footer  */
+#footer{ height: 40px; padding: 5px 0; background: #008EC7; text-align: center; font-size: 12px; color: #ddd;}
+#footer p{ line-height: 150%;}
+#footer .info span{ margin: 0 5px;}
+#footer .copyright{}
+
+/** Guide Page **/
+#step-bar{ _position: absolute; width: 800px; height: 60px; line-height:60px; overflow: hidden; margin: 0 auto; border-top: 10px solid #008EC7; border-bottom: 2px solid #ddd; background: #fff; _position: relative; _left:0;}
+.step-button{ width: 294px; float: left; display: block; background-image: url(../../images/guide/stepbar.png); background-repeat: no-repeat; background-position: right top; color: #999;}
+.step-button:hover{ text-decoration: none; color: #999;}
+.step-button:hover span{ text-decoration: none;}
+.step-button#st{ width: 253px;}
+.step-button#nd{ background-position: left top;}
+.step-button#rd{ width: 253px; background-position: left top;}
+.step-button.current{ background-position: right -60px!important; color: #fff;}
+.step-button#rd.current{ background-position: left -60px!important;}
+.step-button.finished{ background: none; color: #6DDF00;}
+.step-button.finished .checked{ width: 16px; height: 16px; display: block; float: right;  position:relative; left: -20px; top:24px; *top:-36px; background-image: url(../../images/guide/finished.png); _background-image: url(../../images/guide/finished_ie6.png); background-repeat: no-repeat; background-position: 0 0;}
+.step-button .no{ font-size: 36px; position: relative; top: -3px; margin-right: 5px;}
+.step-button .text{ position: relative; top:-6px;}
+
+.slide{ width: 760px; padding: 50px 20px; _padding: 80px 20px; background: #fff; text-align: left;}
+.slide h2{ font-size: 16px; font-weight: 300; color: #444; border-bottom: 1px solid #ddd; padding: 10px 0; margin-bottom: 30px;}
+.slide h2 .ps{ float: right; font-size: 12px; margin-left: 10px; color: #999;}
+.slide form{ padding-left: 180px;}
+#step3{ border-bottom: 3px solid #007DB7;}
+#step3 .content{ padding-top: 300px; background-image: url(../../images/guide/mobile_ad.png); background-repeat: no-repeat; background-position:  center top;}
+#step3 .content p{ padding: 10px 0; line-height: 200%; text-align: center; color: #666;}
+#step3 .gist{ width: 360px; margin: 20px auto;}
+#step3 .gist th,#step3 .gist td{ padding: 2px 4px; text-align: center; border: 1px solid #ddd; font-size: 12px;}
+#step3 .gist th{ background: #f9f9f9; border-bottom: none;}
+
+/* 状态 */
+#status{}
+#havconn{ height: 35px; line-height: 35px; color: #468847;}
+#havconn img{ position: relative; top: 10px; margin-right: 10px;}
+
+/* 保存设置 */
+#save{ border-bottom: 3px solid #007DB7;}
+
+/** Agreemen Page **/
+#agreemen{}
+
+/** ToolPage **/
+#toolpage{ margin: 0; padding: 0; height: 100%; overflow: hidden; font-size: 12px; background: #fff; font-family: Microsoft Yahei;}
+#toolpage a{ color: #D4F1FF }
+#toolpage a:hover{ color: #fff;}
+#toolpage ul, #toolpage li{ margin: 0; padding: 0; list-style: none;}
+#toolbar{ position:fixed; width: 100%; height: 72px; line-height: 72px; padding-bottom: 9px; background-color: #0093D9; background-image: url(../../images/guide/toolbar.png); background-repeat: repeat-x; background-position: center top; text-align: center;}
+#toolbar h1{ margin: 0; padding: 0; width: 130px; height: 40px; padding: 12px 10px 0; float: left;}
+#toolbar h1 a#logo{ display: block; height: 52px; background-image: url(../../images/guide/toolbar_logo.png); _background-image: url(../../images/guide/toolbar_logo_ie6.png); background-repeat: no-repeat; background-position: 0 0; text-indent: -9999px; overflow: hidden;}
+#toolbar #plugins{ width: 600px; height: 32px; line-height: 32px; margin: 0 auto; text-align: center; padding-top: 20px;}
+#toolbar #plugins li{ display: inline;}
+#toolbar #plugins a{ display: block; float: left; padding-right: 10px; margin-right: 10px; height: 30px; line-height: 30px; color: #D4F1FF; background: url(../../images/guide/toolbar_pipe.png) no-repeat right top;} /* 131005 */
+#toolbar #plugins a:hover{ color: #fff;} /* 131005 */
+#toolbar #plugins a .icon{ display: block; float: left; margin-top: 7px; margin-right: 10px; width: 16px; height: 16px; line-height: 30px; background-image: url(../../images/guide/tool_icon.png); _background-image: url(../../images/guide/tool_icon_ie6.png); background-repeat: no-repeat; background-position: left center;} /* 131005 */
+#toolbar #plugins a:hover .icon{ background-position: -16px 0;} /* 131005 */
+#toolbar #close{ width: 30px; height: 30px; display: block; float: right; background-image: url(../../images/guide/toolbar_close.png); _background-image: url(../../images/guide/toolbar_close_ie6.png); background-position: 0 0; text-indent: -9999px; overflow: hidden; margin-top: 20px; margin-right: 10px;} /* 131005 */
+#toolbar #close:hover{ background-position: -30px 0;}
+#viewing{height: 90%; padding-top:72px;}
+#toolbar #plugins #more a{ background: none!important}  /* 131005 */
+#toolbar #plugins #more a .icon{ width: 12px; height: 6px; background-image: url(../../images/guide/drop.gif); background-repeat: no-repeat; background-position: 0 0; position: relative; top: 5px; } /* 131005 */
+#toolbar #plugins #more a:hover .icon{ background-position: 0 0; position: relative; top: 5px; } /* 131005 */
+#morediv{ position: absolute; width: 105px; background: #0093D9; margin-left: -10px; margin-top: 21px;} /* 131005 */
+#morediv li{ margin: 0; padding: 0; list-style: none; height: 32px; line-height: 32px; border-top: 1px solid #D4F1FF;}  /* 131005 */
+#morediv li a{ display: block;} /* 131005 */
+#morediv li a:hover{background: #008CD8;} /* 131005 */
+
+
+
+@media (max-width: 800px){
+#toolpage{ min-width: 480px;}
+#toolbar{ height: 228px; background-position: center bottom; position: fixed;}
+#toolbar #plugins{ position: absolute; margin-top: 60px; width: 100%; padding-top: 0;}
+#toolbar #plugins a{ float: none; clear: both; margin-right: 0; text-align: center; border-top: 1px solid #66BFE9; padding: 5px 10px; background-image: none;} /* 131005 */
+#morediv{ width: 100%; margin-left: 0; margin-top: 3px;} /* 131005 */
+#morediv li{ display: block;} /* 131005 */
+#morediv li a{ padding-left: 24px;} /* 131005 */
+
+}
+
+/* for 2x retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+#header{ background-image: url(../../images/guide/logo@2x.png); background-size: 90px auto; }
+.step-button{ background-image: url(../../images/guide/stepbar@2x.png); background-size: auto 120px;}
+#step3 .content{ background-image: url(../../images/guide/mobile_ad@2x.png); background-size: auto 72px;}
+.step-button.finished .checked{background-image: url(../../images/guide/finished@2x.png); background-size: 16px auto;}
+#toolpage #toolbar h1 a#logo{ background-image: url(../../images/guide/toolbar_logo@2x.png); background-size: 130px auto;}
+#toolbar #plugins a .icon{  background-image: url(../../images/guide/tool_icon@2x.png); background-size: 32px auto;} /* 131005 */
+#toolbar #plugins #more a .icon{ background-image: url(../../images/guide/drop@2x.gif); background-size: 12px 6px;} /* 131005 */
+#toolbar #close{ background-image: url(../../images/guide/toolbar_close@2x.png); background-size: 60px auto;}
+
+}
+
+
+

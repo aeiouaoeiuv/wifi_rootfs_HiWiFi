@@ -1,0 +1,13 @@
+Package: kmod-crypto-iv
+Version: 3.3.8-1
+Depends: kmod-crypto-manager, kmod-crypto-rng, kmod-crypto-wq, kmod-crypto-core
+Provides: 
+Source: package/kernel/linux
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 3911
+Description:  CryptoAPI initialization vectors
